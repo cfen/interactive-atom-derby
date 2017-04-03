@@ -1,0 +1,166 @@
+@import "mq";
+@import "fonts";
+@import "palette";
+@import "bower_components/guss-grid-system/_grid-system.scss";
+
+@import "scorerslice";
+
+// Uncomment for embeds
+//@import "embed";
+
+// Uncomment for full screen (including immersive article main media)
+//@import "fullscreen";
+
+$accent-color:#4BC6DF;
+
+.element-atom,
+.interactive-atom {
+    margin: 0 !important;
+}
+
+
+button:focus {
+	outline:0 !important;
+}
+
+
+h2{
+	@include fs-header(4);
+	color: $neutral-1;
+	padding-top:3px;
+}
+
+.styled-name{
+		@include fs-headline(6);
+		color: $accent-color;
+		padding-top:3px;
+}
+
+.styled-number{
+		 @include f-sans;
+	    font-weight: 200;
+	    line-height: 39px;
+	    font-size: 36px;
+		color: $accent-color;
+		font-size:120px;
+		line-height: 120px;
+		font-weight:200;
+		padding-top:3px;
+}
+
+
+
+h4, h5{
+	@include fs-bodyHeading(3);
+	color: $neutral-1;
+}
+
+.element-atom,
+.interactive-atom {
+    margin: 0 !important;
+    background:#FFF;
+    margin-bottom: 0 !important;
+    @include mq(tablet){
+    	margin-bottom: 0 !important;
+    }
+}
+
+.gv-slice {
+	width:100%;
+	margin:0 auto;
+	background:rgba($neutral-4,0.5);
+}
+
+.gv-inner, .nav-slice-inner{
+	max-width:620px;
+	margin: 0;
+	padding:$gs-baseline 0;
+	background: #FFF;
+
+	@media(min-width:480px){
+
+	}
+	@media(min-width:740px){
+		margin:0 auto;	
+		padding: $gs-baseline 0;
+		max-width:740px;
+	}
+	@media(min-width:980px){
+		max-width:980px;
+	}
+	@media(min-width:1140px){
+		max-width:1140px;
+	}
+	@media(min-width:1300px){
+		max-width:1300px;
+	}
+}
+
+
+
+
+.gv-section-title {
+	width:100%;
+	float:none;
+	margin: 0;
+	padding: 0 $gs-gutter*0.5;
+
+	@include mq(tablet){
+		margin: 0 $gs-gutter;	
+		padding: 0;
+	}	
+	@include mq(desktop){
+		max-width: 140px;
+		float: left;
+	}
+	@media(min-width:1300px){
+		max-width: 220px;
+		float: left;
+	}
+
+	// h2, h3 {
+	// 		@include fs-header(5);
+	// 	}
+}
+
+.gv-inner-content{
+	position:relative;
+	margin: 0;
+	padding: 0 $gs-gutter*0.5;
+
+	@include mq(tablet){
+		margin: 0 $gs-gutter;	
+		padding: 0;
+	}	
+
+	@include mq(desktop){
+			margin-left:160px;
+		}
+	@include mq(wide){
+			margin-left:240px;
+		}
+
+	p, h2, h3 {
+	    	max-width: 620px;
+	 	}
+
+	
+}
+
+.inactive{
+	display: none;
+}
+
+active{
+	display: block;
+}
+
+
+.l-footer {
+    display: block !important; 
+    position: relative;
+}
+
+
+
+// Project specific imports

@@ -1,0 +1,396 @@
+{
+  "matches": [
+    {
+      "Venue": "Spurs",
+      "Date": "December 12, 1992",
+      "Score": "1–0",
+      "Tottenham goalscorers": "Allen 20'",
+      "Arsenal goalscorers": "",
+      "Attendance": "33,707"
+    },
+    {
+      "Venue": "Spurs",
+      "Date": "August 16, 1993",
+      "Score": "0–1",
+      "Tottenham goalscorers": "",
+      "Arsenal goalscorers": "Wright 87'",
+      "Attendance": "28,355"
+    },
+    {
+      "Venue": "Spurs",
+      "Date": "January 2, 1995",
+      "Score": "1–0",
+      "Tottenham goalscorers": "Popescu 22'",
+      "Arsenal goalscorers": "",
+      "Attendance": "28,747"
+    },
+    {
+      "Venue": "Spurs",
+      "Date": "November 18, 1995",
+      "Score": "2–1",
+      "Tottenham goalscorers": "Sheringham 29', Armstrong 54'",
+      "Arsenal goalscorers": "Bergkamp 14'",
+      "Attendance": "32,894"
+    },
+    {
+      "Venue": "Spurs",
+      "Date": "February 15, 1997",
+      "Score": "0–0",
+      "Tottenham goalscorers": "",
+      "Arsenal goalscorers": "",
+      "Attendance": "33,039"
+    },
+    {
+      "Venue": "Spurs",
+      "Date": "December 28, 1997",
+      "Score": "1–1",
+      "Tottenham goalscorers": "Nielsen 28'",
+      "Arsenal goalscorers": "Parlour 62'",
+      "Attendance": "29,610"
+    },
+    {
+      "Venue": "Spurs",
+      "Date": "May 5, 1999",
+      "Score": "1–3",
+      "Tottenham goalscorers": "Anderton 43'",
+      "Arsenal goalscorers": "Petit 17', Anelka 33', Kanu 85'",
+      "Attendance": "36,019"
+    },
+    {
+      "Venue": "Spurs",
+      "Date": "November 7, 1999",
+      "Score": "2–1",
+      "Tottenham goalscorers": "Iversen 7', Sherwood 20'",
+      "Arsenal goalscorers": "Vieira 39'",
+      "Attendance": "36,085"
+    },
+    {
+      "Venue": "Spurs",
+      "Date": "December 18, 2000",
+      "Score": "1–1",
+      "Tottenham goalscorers": "Rebrov 31'",
+      "Arsenal goalscorers": "Vieira 89'",
+      "Attendance": "36,062"
+    },
+    {
+      "Venue": "Spurs",
+      "Date": "November 17, 2001",
+      "Score": "1–1",
+      "Tottenham goalscorers": "Poyet 90'",
+      "Arsenal goalscorers": "Pirès 81'",
+      "Attendance": "36,049"
+    },
+    {
+      "Venue": "Spurs",
+      "Date": "December 15, 2002",
+      "Score": "1-1",
+      "Tottenham goalscorers": "Ziege 11'",
+      "Arsenal goalscorers": "Pirès 45' (pen.)",
+      "Attendance": "36,076"
+    },
+    {
+      "Venue": "Spurs",
+      "Date": "April 25, 2004",
+      "Score": "2–2",
+      "Tottenham goalscorers": "Redknapp 62', Keane 90' (pen.)",
+      "Arsenal goalscorers": "Vieira 3', Pirès 35'",
+      "Attendance": "36,097"
+    },
+    {
+      "Venue": "Spurs",
+      "Date": "November 13, 2004",
+      "Score": "4–5",
+      "Tottenham goalscorers": "Naybet 37', Defoe 61', King 74', Kanouté 88'",
+      "Arsenal goalscorers": "Henry 45', Lauren 55' (pen.), Vieira 60', Ljungberg 69, Pirès 81'",
+      "Attendance": "36,095"
+    },
+    {
+      "Venue": "Spurs",
+      "Date": "October 29, 2005",
+      "Score": "1–1",
+      "Tottenham goalscorers": "King 17'",
+      "Arsenal goalscorers": "Pirès 77'",
+      "Attendance": "36,154"
+    },
+    {
+      "Venue": "Spurs",
+      "Date": "April 21, 2007",
+      "Score": "2–2",
+      "Tottenham goalscorers": "Keane 30', Jenas 90'",
+      "Arsenal goalscorers": "Touré 64', Adebayor 78'",
+      "Attendance": "36,050"
+    },
+    {
+      "Venue": "Spurs",
+      "Date": "September 15, 2007",
+      "Score": "1–3",
+      "Tottenham goalscorers": "Bale 15'",
+      "Arsenal goalscorers": "Adebayor 65', Adebayor 90', Fàbregas 80'",
+      "Attendance": "36,053"
+    },
+    {
+      "Venue": "Spurs",
+      "Date": "February 8, 2009",
+      "Score": "0–0",
+      "Tottenham goalscorers": "",
+      "Arsenal goalscorers": "",
+      "Attendance": "36,021"
+    },
+    {
+      "Venue": "Spurs",
+      "Date": "April 14, 2010",
+      "Score": "2–1",
+      "Tottenham goalscorers": "Rose 10', Bale 47'",
+      "Arsenal goalscorers": "Bendtner 85'",
+      "Attendance": "36,041"
+    },
+    {
+      "Venue": "Spurs",
+      "Date": "April 20, 2011",
+      "Score": "3–3",
+      "Tottenham goalscorers": "van-der-Vaart 7', van-der-Vaart 70' (pen.), Huddlestone 44'",
+      "Arsenal goalscorers": "Walcott 5', Nasri 12', van-Persie 40'",
+      "Attendance": "36,138"
+    },
+    {
+      "Venue": "Spurs",
+      "Date": "October 2, 2011",
+      "Score": "2–1",
+      "Tottenham goalscorers": "van-der-Vaart 40', Walker 73'",
+      "Arsenal goalscorers": "Ramsey 51'",
+      "Attendance": "36,274"
+    },
+    {
+      "Venue": "Spurs",
+      "Date": "March 3, 2013",
+      "Score": "2–1",
+      "Tottenham goalscorers": "Bale 37', Lennon 39'",
+      "Arsenal goalscorers": "Mertesacker 51'",
+      "Attendance": "36,170"
+    },
+    {
+      "Venue": "Spurs",
+      "Date": "March 16, 2014",
+      "Score": "0–1",
+      "Tottenham goalscorers": "",
+      "Arsenal goalscorers": "Rosický 2'",
+      "Attendance": "35,711"
+    },
+    {
+      "Venue": "Spurs",
+      "Date": "February 7, 2015",
+      "Score": "2–1",
+      "Tottenham goalscorers": "Kane 55', Kane 86'",
+      "Arsenal goalscorers": "Özil 11'",
+      "Attendance": "35,659"
+    },
+    {
+      "Venue": "Spurs",
+      "Date": "March 5, 2016",
+      "Score": "2–2",
+      "Tottenham goalscorers": "Alderweireld 60', Kane 62'",
+      "Arsenal goalscorers": "Ramsey 39', Sánchez 76'",
+      "Attendance": "35,762"
+    },
+    {
+      "Venue": "Arsenal",
+      "Date": "May 11, 1993",
+      "Score": "1–3",
+      "Tottenham goalscorers": "Sheringham 39', Hendry 46', Hendry 78'",
+      "Arsenal goalscorers": "Dickov 52'",
+      "Attendance": "26,393"
+    },
+    {
+      "Venue": "Arsenal",
+      "Date": "December 6, 1993",
+      "Score": "1–1",
+      "Tottenham goalscorers": "Anderton 25'",
+      "Arsenal goalscorers": "Wright 65'",
+      "Attendance": "35,669"
+    },
+    {
+      "Venue": "Arsenal",
+      "Date": "April 29, 1995",
+      "Score": "1–1",
+      "Tottenham goalscorers": "Klinsmann 74'",
+      "Arsenal goalscorers": "Wright 61' (pen.)",
+      "Attendance": "38,337"
+    },
+    {
+      "Venue": "Arsenal",
+      "Date": "April 15, 1996",
+      "Score": "0–0",
+      "Tottenham goalscorers": "",
+      "Arsenal goalscorers": "",
+      "Attendance": "38,273"
+    },
+    {
+      "Venue": "Arsenal",
+      "Date": "November 24, 1996",
+      "Score": "3–1",
+      "Tottenham goalscorers": "Sinton 57'",
+      "Arsenal goalscorers": "Wright 28' (pen.), Adams 87', Bergkamp 89'",
+      "Attendance": "38,264"
+    },
+    {
+      "Venue": "Arsenal",
+      "Date": "August 30, 1997",
+      "Score": "0–0",
+      "Tottenham goalscorers": "",
+      "Arsenal goalscorers": "",
+      "Attendance": "38,102"
+    },
+    {
+      "Venue": "Arsenal",
+      "Date": "November 14, 1998",
+      "Score": "0–0",
+      "Tottenham goalscorers": "",
+      "Arsenal goalscorers": "",
+      "Attendance": "38,278"
+    },
+    {
+      "Venue": "Arsenal",
+      "Date": "March 19, 2000",
+      "Score": "2–1",
+      "Tottenham goalscorers": "Armstrong 3'",
+      "Arsenal goalscorers": "Armstrong 20' (o.g.), Henry 45' (pen.)",
+      "Attendance": "38,131"
+    },
+    {
+      "Venue": "Arsenal",
+      "Date": "March 31, 2001",
+      "Score": "2–0",
+      "Tottenham goalscorers": "",
+      "Arsenal goalscorers": "Pirès 70', Henry 87'",
+      "Attendance": "38,121"
+    },
+    {
+      "Venue": "Arsenal",
+      "Date": "April 6, 2002",
+      "Score": "2–1",
+      "Tottenham goalscorers": "Sheringham 81' (pen.)",
+      "Arsenal goalscorers": "Ljungberg 25', Lauren 86' (pen.)",
+      "Attendance": "38,186"
+    },
+    {
+      "Venue": "Arsenal",
+      "Date": "November 16, 2002",
+      "Score": "3–0",
+      "Tottenham goalscorers": "",
+      "Arsenal goalscorers": "Henry 13', Ljungberg 55', Wiltord 71'",
+      "Attendance": "38,152"
+    },
+    {
+      "Venue": "Arsenal",
+      "Date": "November 8, 2003",
+      "Score": "2–1",
+      "Tottenham goalscorers": "Anderton 5'",
+      "Arsenal goalscorers": "Pirès 69', Ljungberg 79'",
+      "Attendance": "38,101"
+    },
+    {
+      "Venue": "Arsenal",
+      "Date": "April 25, 2005",
+      "Score": "1–0",
+      "Tottenham goalscorers": "",
+      "Arsenal goalscorers": "Reyes 22'",
+      "Attendance": "38,147"
+    },
+    {
+      "Venue": "Arsenal",
+      "Date": "April 22, 2006",
+      "Score": "1–1",
+      "Tottenham goalscorers": "Keane 66'",
+      "Arsenal goalscorers": "Henry 84'",
+      "Attendance": "38,326"
+    },
+    {
+      "Venue": "Arsenal",
+      "Date": "December 2, 2006",
+      "Score": "3–0",
+      "Tottenham goalscorers": "",
+      "Arsenal goalscorers": "Adebayor 20', Gilberto 42' (pen.), Gilberto 72' (pen.)",
+      "Attendance": "60,115"
+    },
+    {
+      "Venue": "Arsenal",
+      "Date": "December 22, 2007",
+      "Score": "2–1",
+      "Tottenham goalscorers": "Berbatov 65'",
+      "Arsenal goalscorers": "Adebayor 47', Bendtner 75'",
+      "Attendance": "60,087"
+    },
+    {
+      "Venue": "Arsenal",
+      "Date": "October 29, 2008",
+      "Score": "4–4",
+      "Tottenham goalscorers": "Bentley 13', Bent 65', Jenas 89', Lennon 90'",
+      "Arsenal goalscorers": "Silvestre 37', Gallas 46, Adebayor 64', van-Persie 68'",
+      "Attendance": "60,043"
+    },
+    {
+      "Venue": "Arsenal",
+      "Date": "October 31, 2009",
+      "Score": "3–0",
+      "Tottenham goalscorers": "",
+      "Arsenal goalscorers": "van-Persie 42', van-Persie 60', Fàbregas 43'",
+      "Attendance": "60,103"
+    },
+    {
+      "Venue": "Arsenal",
+      "Date": "November 20, 2010",
+      "Score": "2–3",
+      "Tottenham goalscorers": "Bale 50', van-der-Vaart 67' (pen.), Kaboul 86'",
+      "Arsenal goalscorers": "Nasri 9', Chamakh 27'",
+      "Attendance": "60,102"
+    },
+    {
+      "Venue": "Arsenal",
+      "Date": "February 26, 2012",
+      "Score": "5–2",
+      "Tottenham goalscorers": "Saha 4', Adebayor 34' (pen.)",
+      "Arsenal goalscorers": "Sagna 40', van-Persie 43', Rosický 51', Walcott 65', Walcott 68'",
+      "Attendance": "60,106"
+    },
+    {
+      "Venue": "Arsenal",
+      "Date": "November 17, 2012",
+      "Score": "5–2",
+      "Tottenham goalscorers": "Adebayor 10', Bale 71'",
+      "Arsenal goalscorers": "Mertesacker 24', Podolski 42', Giroud 45', Cazorla 60', Walcott 90'",
+      "Attendance": "60,111"
+    },
+    {
+      "Venue": "Arsenal",
+      "Date": "September 1, 2013",
+      "Score": "1–0",
+      "Tottenham goalscorers": "",
+      "Arsenal goalscorers": "Giroud 23'",
+      "Attendance": "60,071"
+    },
+    {
+      "Venue": "Arsenal",
+      "Date": "September 27, 2014",
+      "Score": "1–1",
+      "Tottenham goalscorers": "Chadli 56'",
+      "Arsenal goalscorers": "Oxlade-Chamberlain 74'",
+      "Attendance": "59,900"
+    },
+    {
+      "Venue": "Arsenal",
+      "Date": "November 8, 2015",
+      "Score": "1–1",
+      "Tottenham goalscorers": "Kane 32'",
+      "Arsenal goalscorers": "Gibbs 77'",
+      "Attendance": "60,060"
+    },
+    {
+      "Venue": "Arsenal",
+      "Date": "November 6, 2016",
+      "Score": "1–1",
+      "Tottenham goalscorers": "Kane 51' (pen.)",
+      "Arsenal goalscorers": "Wimmer 42' (O.G)",
+      "Attendance": "60,039"
+    }
+  ]
+}

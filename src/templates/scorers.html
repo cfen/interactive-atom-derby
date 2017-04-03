@@ -1,0 +1,26 @@
+
+<div class="gv-slice scorer-slice" id="scorerContent">
+	{{#data}}
+	<div class="gv-inner">
+		<div class="gv-section-title">
+			<!-- <h2 class="slice-one-header">Head-to-head</h2> -->
+		</div>
+
+		<div class="gv-inner-content">
+			
+					<h2 class="styled-name">{{{printScorer}}}</h2>
+
+					<h2 class="styled-number">{{{goalTally}}}</h2>
+
+					{{#matches}}
+						<p>{{{Date}}} {{{Score}}} {{{Attendance}}} {{{aGoals}}}</p>
+
+					{{/matches}}
+			
+
+
+
+		</div>
+	</div>
+	{{/data}}
+</div>

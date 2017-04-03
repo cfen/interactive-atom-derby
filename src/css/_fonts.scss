@@ -1,0 +1,30 @@
+@import 'bower_components/guss-typography/_typography.scss';
+
+
+@mixin f-sans {
+    font-family: 'Guardian Sans Web';
+}
+
+@font-face {
+    font-family: 'Guardian Sans Web';
+    src: url('https://interactive.guim.co.uk/fonts/displaysans/fonts/gdnsands6bol-webfont.woff2') format('woff2'),
+         url('https://interactive.guim.co.uk/fonts/displaysans/fonts/gdnsands6bol-webfont.woff') format('woff');
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Guardian Sans Web';
+    src: url('https://interactive.guim.co.uk/fonts/displaysans/fonts/gdnsands3reg-webfont.woff2') format('woff2'),
+         url('https://interactive.guim.co.uk/fonts/displaysans/fonts/gdnsands3reg-webfont.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Guardian Sans Web';
+    src: url('https://interactive.guim.co.uk/fonts/displaysans/fonts/gdnsands1thi-webfont.woff2') format('woff2'),
+         url('https://interactive.guim.co.uk/fonts/displaysans/fonts/gdnsands1thi-webfont.woff') format('woff');
+    font-weight: 200;
+    font-style: normal;
+}
