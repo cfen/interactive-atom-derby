@@ -9,20 +9,48 @@
 // }
 
 .gv-scorer-wrapper {
+		height:auto;
 
-		list-style-type: none;
-	    margin: 0;
-	    padding: 0;
-
-	    li {
-	    	width:100%;
-	    	max-width: 300px;
-	    	height: 800px;
-	    	text-align: top;
-	    	vertical-align: top;
-		    float: left;
+		ul{
+			position:relative;
+			list-style-type: none;
+		    margin: 0;
+		    padding: 0;
+		    height:800px; 
 		}
 
+	    li {
+    	    display: inline-block;
+		    width: 100%;
+		    max-width: 179px;
+		    padding-right: 19px;
+		    margin-right: 10px;
+		    height: 100%;
+		    text-align: top;
+		    vertical-align: top;
+		    border-right: 1px solid #dcdcdc;
+		    height: 720px;
+		}
+
+		li:first-child{
+		    margin-left: 24px;
+		}
+
+		li:last-child{
+		    border: 0;
+		}
+
+
+
+}
+
+.home-team-pip, .away-team-pip{
+	opacity:0.8;
+}
+
+.hl-pip{
+	opacity:0.8;
+	color:$accent-color;
 }
 
 .gv-date{
@@ -36,19 +64,26 @@
 
 .gv-home-team{
 	float:left;
-	width: 35%;
+	width: 66px;
 	text-align:left;
 }
 
 .gv-goals{
 	float:left;
-	width: 29%;
+	width: 39px;
 	text-align:center;
 }
 .gv-away-team{
 	float:right;
-	width: 35%;
+	width: 66px;
 	text-align:left;
+}
+
+.pips-holder{
+	@include fs-textSans(3);
+	line-height:12px;
+	color:$neutral-3;
+
 }
 
 .gv-print-result{
@@ -59,31 +94,31 @@
 
 
 .gv-list-item{
-	background-position: top center;
+	background-position: top right;
     background-repeat: no-repeat;
-    background-size: auto 220px;
+    background-size: auto 180px;
 }
 
-.list-item-Adebayor{
-	background-image: url('<%= path %>/assets/imgs/Adebayor.png');
-}
+// .list-item-Adebayor{
+// 	background-image: url('<%= path %>/assets/imgs/Adebayor.png');
+// }
 
-.list-item-Pires{
-	background-image: url('<%= path %>/assets/imgs/Pires.png');
-}
+// .list-item-Pires{
+// 	background-image: url('<%= path %>/assets/imgs/Pires.png');
+// }
 
-.list-item-Kane{
-	background-image: url('<%= path %>/assets/imgs/Kane.png');
-}
+// .list-item-Kane{
+// 	background-image: url('<%= path %>/assets/imgs/Kane.png');
+// }
 
-.list-item-Bale{
-	background-image: url('<%= path %>/assets/imgs/Bale.png');
-}
+// .list-item-Bale{
+// 	background-image: url('<%= path %>/assets/imgs/Bale.png');
+// }
 
-.list-item-Henry{
-	background-image: url('<%= path %>/assets/imgs/Henry.png');
-}
+// .list-item-Henry{
+// 	background-image: url('<%= path %>/assets/imgs/Henry.png');
+// }
 
-.list-item-van-Persie{
-	background-image: url('<%= path %>/assets/imgs/van-Persie.png');
-}
+// .list-item-van-Persie{
+// 	background-image: url('<%= path %>/assets/imgs/van-Persie.png');
+// }

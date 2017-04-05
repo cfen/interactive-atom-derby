@@ -3,6 +3,9 @@
 @import "palette";
 @import "bower_components/guss-grid-system/_grid-system.scss";
 
+$accent-color:$news-main-2;
+
+
 @import "scorerslice";
 
 //Uncomment for embeds
@@ -11,7 +14,7 @@
 //Uncomment for full screen (including immersive article main media)
 @import "fullscreen";
 
-$accent-color:#4BC6DF;
+
 
 .element-atom,
 .interactive-atom {
@@ -155,15 +158,15 @@ h4, h5{
 	display: none;
 }
 
-active{
+.active{
 	display: block;
 }
 
 
-.l-footer {
-    display: block !important; 
-    position: relative;
-}
+// .l-footer {
+//     display: block !important; 
+//     position: relative;
+// }
 
 
 

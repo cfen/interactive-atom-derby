@@ -48,6 +48,8 @@
     "vinyl-source-stream": "^1.1.0"
   },
   "dependencies": {
-    "request-promise": "^4.2.0"
+    "file-system": "^2.2.2",
+    "request-promise": "^4.2.0",
+    "xr": "^0.2.3"
   }
 }
