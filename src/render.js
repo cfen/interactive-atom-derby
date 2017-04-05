@@ -4,6 +4,8 @@ import rp from 'request-promise'
 import teamGamesTemplate from './src/templates/teamGames.html!text'
 import teamGoalsTemplate from './src/templates/teamGoals.html!text'
 import scorersTemplate from './src/templates/scorers.html!text'
+import { whitespaceFixRemoveSpaceAndAccents } from './js/lib/utils'
+
 
 var scorersTotal = [];
 var aWins = [];
@@ -19,22 +21,13 @@ export async function render() {
         json: true
     }));
 
-
-    console.log(data)
-
-
     let teamGamesHTML = Mustache.render(teamGamesTemplate, data);
 
     let teamGoalsHTML = Mustache.render(teamGoalsTemplate, data);
 
     let scorersHTML = Mustache.render(scorersTemplate, {  "data": data.scorerChart });
 
-
-
     return `${teamGamesHTML}${teamGoalsHTML}${scorersHTML}`;
-
-
-
 }
 
 
@@ -42,7 +35,6 @@ export async function render() {
 
 function initView(data) {
 	var editHtml = Mustache.render(mainTemplate, data);  
-
     return editHtml;
 }
 
@@ -62,12 +54,19 @@ function formatData(data) {
         match.tGoalsTally = match.tGoals.length;
         aCountGoals += match.aGoals.length;
         tCountGoals += match.tGoals.length;
+
         match.printResult = getPrintResult(match);
+        if (match.Venue == 'Spurs') {  match.printHomeTeam = "Tottenham" ; match.printScore = " " + match.tGoals.length + " – " + match.aGoals.length; match.printAwayTeam = "Arsenal" }
+        else if (match.Venue == 'Arsenal')  {  match.printHomeTeam = "Arsenal" ; match.printScore = " " + match.aGoals.length + " – " + match.tGoals.length; match.printAwayTeam = "Tottenham" }
+
+
         match.mobilePrintResult = getMobilePrintResult(match);
 
         if (match.outcome == "aWin") { aWins.push(match) }
         if (match.outcome == "tWin") { tWins.push(match) }
         if (match.outcome == "draw") { draws.push(match) }
+
+
 
         return match;
     });
@@ -109,15 +108,19 @@ function getOutcome(match) {
 
 function getPrintResult(match) {
     var t;
-    if (match.Venue = "Spurs") { t = "Tottenham " + " " + match.tGoals.length + " – " + match.aGoals.length + " Arsenal" }
-    if (match.Venue = "Arsenal") { t = "Arsenal " + " " + match.aGoals.length + " – " + match.tGoals.length + " Tottenham" }
-    return t;
+    if (match.Venue == 'Spurs') {  t = "Tottenham " + " " + match.tGoals.length + " – " + match.aGoals.length + " Arsenal" }
+    else if (match.Venue == 'Arsenal')  {  t = "Arsenal " + " " + match.aGoals.length + " – " + match.tGoals.length + " Tottenham" }
+
+
+
+    return  t;
+
 }
 
 function getMobilePrintResult(match) {
     var t;
-    if (match.Venue = "Spurs") { t = "TOT " + " " + match.tGoals.length + " – " + match.aGoals.length + " ARS" }
-    if (match.Venue = "Arsenal") { t = "ARS " + " " + match.aGoals.length + " – " + match.tGoals.length + " TOT" }
+    if (match.Venue == 'Spurs') { t = "TOT " + " " + match.tGoals.length + " – " + match.aGoals.length + " ARS" }
+    else if (match.Venue == 'Arsenal'){ t = "ARS " + " " + match.aGoals.length + " – " + match.tGoals.length + " TOT" }
     return t;
 }
 
@@ -125,7 +128,7 @@ function getMobilePrintResult(match) {
 function getTopScorerChart(a) {
     var temp = [];
 
-    let minGoals = 4;
+    let minGoals = 5;
 
 
     for (var i = 0; i < a.length; i++) {
@@ -185,6 +188,7 @@ function checkGoalTotals(s, m) {
         var newObj = {};
 
         newObj.scorer = s;
+        newObj.scorerRef = whitespaceFixRemoveSpaceAndAccents(s);
         newObj.printScorer = s.split("-").join(" ");
         newObj.goalTally = 1;
         newObj.matches = [];
@@ -204,6 +208,7 @@ function checkGoalTotals(s, m) {
     if (!scorerFound) {
         var newObj = {};
         newObj.scorer = s;
+        newObj.scorerRef = whitespaceFixRemoveSpaceAndAccents(s);
         newObj.goalTally = 1;
         newObj.printScorer = s.split("-").join(" ");
         newObj.matches = [];

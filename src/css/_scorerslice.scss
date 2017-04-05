@@ -7,3 +7,83 @@
 // 		font-weight:200;
 // 	}
 // }
+
+.gv-scorer-wrapper {
+
+		list-style-type: none;
+	    margin: 0;
+	    padding: 0;
+
+	    li {
+	    	width:100%;
+	    	max-width: 300px;
+	    	height: 800px;
+	    	text-align: top;
+	    	vertical-align: top;
+		    float: left;
+		}
+
+}
+
+.gv-date{
+	@include fs-textSans(3);
+	color:$neutral-3;
+}
+
+.gv-match-result{
+	@include fs-textSans(3);
+}
+
+.gv-home-team{
+	float:left;
+	width: 35%;
+	text-align:left;
+}
+
+.gv-goals{
+	float:left;
+	width: 29%;
+	text-align:center;
+}
+.gv-away-team{
+	float:right;
+	width: 35%;
+	text-align:left;
+}
+
+.gv-print-result{
+	margin-bottom: gs-height(1);
+	@include fs-textSans(3);
+	color:$neutral-2;
+}
+
+
+.gv-list-item{
+	background-position: top center;
+    background-repeat: no-repeat;
+    background-size: auto 220px;
+}
+
+.list-item-Adebayor{
+	background-image: url('<%= path %>/assets/imgs/Adebayor.png');
+}
+
+.list-item-Pires{
+	background-image: url('<%= path %>/assets/imgs/Pires.png');
+}
+
+.list-item-Kane{
+	background-image: url('<%= path %>/assets/imgs/Kane.png');
+}
+
+.list-item-Bale{
+	background-image: url('<%= path %>/assets/imgs/Bale.png');
+}
+
+.list-item-Henry{
+	background-image: url('<%= path %>/assets/imgs/Henry.png');
+}
+
+.list-item-van-Persie{
+	background-image: url('<%= path %>/assets/imgs/van-Persie.png');
+}

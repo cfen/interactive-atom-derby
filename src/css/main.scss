@@ -5,11 +5,11 @@
 
 @import "scorerslice";
 
-// Uncomment for embeds
+//Uncomment for embeds
 //@import "embed";
 
-// Uncomment for full screen (including immersive article main media)
-//@import "fullscreen";
+//Uncomment for full screen (including immersive article main media)
+@import "fullscreen";
 
 $accent-color:#4BC6DF;
 
@@ -31,21 +31,25 @@ h2{
 }
 
 .styled-name{
-		@include fs-headline(6);
-		color: $accent-color;
-		padding-top:3px;
+	@include fs-headline(4);
+	color: $accent-color;
+	padding-top:3px;
+	font-weight:200;
+	padding:0;
+	margin:0;
 }
 
 .styled-number{
-		 @include f-sans;
-	    font-weight: 200;
-	    line-height: 39px;
-	    font-size: 36px;
-		color: $accent-color;
-		font-size:120px;
-		line-height: 120px;
-		font-weight:200;
-		padding-top:3px;
+	 @include f-sans;
+    font-weight: 200;
+    line-height: 39px;
+    font-size: 36px;
+	color: $accent-color;
+	font-size:200px;
+	line-height: 160px;
+	font-weight:200;
+	padding:0;
+	margin:0;
 }
 
 
