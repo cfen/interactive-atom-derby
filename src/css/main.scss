@@ -5,7 +5,11 @@
 
 $accent-color:$news-main-2;
 
+$spurs-color: $guardian-brand-dark;
+$arsenal-color: $live-support-2;
+$neutral-team-color: $neutral-4;
 
+@import "headSlice";
 @import "scorerslice";
 
 //Uncomment for embeds
@@ -34,10 +38,11 @@ h2{
 }
 
 .styled-name{
-	@include fs-headline(4);
-	color: $accent-color;
+	@include fs-headline(3);
+	line-height: 20px;
+
 	padding-top:3px;
-	font-weight:200;
+	// font-weight:200;
 	padding:0;
 	margin:0;
 }
@@ -45,17 +50,18 @@ h2{
 .styled-number{
 	 @include f-sans;
     font-weight: 200;
-    line-height: 39px;
-    font-size: 36px;
-	color: $accent-color;
-	font-size:200px;
-	line-height: 160px;
+
+
+	font-size:140px;
+	line-height: 120px;
 	font-weight:200;
 	padding:0;
 	margin:0;
 }
 
-
+.styled-name, .styled-number{
+		color: $neutral-3;
+}
 
 h4, h5{
 	@include fs-bodyHeading(3);

@@ -1,0 +1,693 @@
+$aniTime:60s;
+.gv-head-wrapper {
+    width: 100%;
+    display: table;
+}
+
+.gv-head-container {
+    display: table-row;
+}
+
+.gv-head-col-one,
+.gv-head-col-two {
+    display: table-cell;
+    height: 578px;
+    overflow: hidden;
+}
+
+.gv-head-col-one {
+    width: 50%;
+    background-color: $arsenal-color;
+}
+
+.gv-head-col-two {
+    display: table-cell;
+    background-color: $spurs-color
+}
+
+.gv-head-text-holder {
+    position: absolute;
+    left: calc(50% - 240px);
+    top: 0;
+    height: 120px;
+    width: 480px;
+    background-color: none;
+    @include fs-headline(7);
+    font-weight: 200;
+    color: #FFF;
+    text-align: center;
+}
+
+.grahamArsenal{
+	background: url('<%= path %>/assets/imgs/graham.jpg');
+	opacity: 0;
+    background-repeat: no-repeat;
+    background-blend-mode: hard-light;
+	animation: GrahamArseAni $aniTime ease-out infinite;
+}
+.rioch{
+	background: url('<%= path %>/assets/imgs/rioch.jpg');
+	opacity: 0;
+    background-repeat: no-repeat;
+    background-blend-mode: hard-light;
+	animation: riochAni $aniTime ease-out infinite;
+}
+.wenger_1997{
+	background: url('<%= path %>/assets/imgs/wenger_1997.jpg');
+	opacity: 0;
+    background-repeat: no-repeat;
+    background-blend-mode: hard-light;
+	animation: wengerOneAni $aniTime ease-out infinite;
+}
+.wenger_2000{
+	background: url('<%= path %>/assets/imgs/wenger_2000.jpg');
+	opacity: 0;
+    background-repeat: no-repeat;
+    background-blend-mode: hard-light;
+	animation: wengerTwoAni $aniTime ease-out infinite;
+}
+.wenger_2004{
+	background: url('<%= path %>/assets/imgs/wenger_2004.jpg');
+	opacity: 0;
+    background-repeat: no-repeat;
+    background-blend-mode: hard-light;
+	animation: wengerThreeAni $aniTime ease-out infinite;
+}
+.wenger_2008{
+	background: url('<%= path %>/assets/imgs/wenger_2008.jpg');
+	opacity: 0;
+    background-repeat: no-repeat;
+    background-blend-mode: hard-light;
+	animation: wengerFourAni $aniTime ease-out infinite;
+}
+.wenger_2012{
+	background: url('<%= path %>/assets/imgs/wenger_2012.jpg');
+	opacity: 0;
+    background-repeat: no-repeat;
+    background-blend-mode: hard-light;
+	animation: wengerFiveAni $aniTime ease-out infinite;
+}	
+.wenger_2017{
+	background: url('<%= path %>/assets/imgs/wenger_2017.jpg');
+	opacity: 0;
+    background-repeat: no-repeat;
+    background-blend-mode: hard-light;
+	animation: wengerSixAni $aniTime ease-out infinite;
+}	
+.venables {
+    background: url('<%= path %>/assets/imgs/venables.jpg');
+    opacity: 0;
+    background-repeat: no-repeat;
+    background-blend-mode: hard-light;
+    animation: VenablesAni $aniTime ease-out infinite;
+}
+
+.ardiles {
+    background: url('<%= path %>/assets/imgs/ardiles.jpg');
+    opacity: 0;
+    background-repeat: no-repeat;
+    background-blend-mode: hard-light;
+
+    animation: ArdilesAni $aniTime ease-out infinite;
+}
+
+.francis {
+    background: url('<%= path %>/assets/imgs/francis.jpg');
+    	opacity: 0;
+    background-repeat: no-repeat;
+    background-blend-mode: hard-light;
+    animation: FrancisAni $aniTime ease-out infinite;
+}
+
+.gross {
+    background: url('<%= path %>/assets/imgs/gross.jpg');
+    opacity: 0;
+    background-repeat: no-repeat;
+    background-blend-mode: hard-light;
+    animation: GrossAni $aniTime ease-out infinite;
+}
+
+.grahamSpurs {
+    background: url('<%= path %>/assets/imgs/grahamSpurs.jpg');
+    opacity: 0;
+    background-repeat: no-repeat;
+    background-blend-mode: hard-light;
+    animation: GrahamSpursAni $aniTime ease-out infinite;
+}
+
+.hoddle {
+    background: url('<%= path %>/assets/imgs/hoddle.jpg');
+    opacity: 0;
+    background-repeat: no-repeat;
+    background-blend-mode: hard-light;
+    animation: HoddleAni $aniTime ease-out infinite;
+}
+
+.jol {
+    background: url('<%= path %>/assets/imgs/jol.jpg');
+    opacity: 0;
+    background-repeat: no-repeat;
+    background-blend-mode: hard-light;
+    animation: JolAni $aniTime ease-out infinite;
+}
+
+.ramos {
+    background: url('<%= path %>/assets/imgs/ramos.jpg');
+    opacity: 0;
+    background-repeat: no-repeat;
+    background-blend-mode: hard-light;
+    animation: RamosAni $aniTime ease-out infinite;
+}
+
+.redknapp {
+    background: url('<%= path %>/assets/imgs/redknapp.jpg');
+    opacity: 0;
+    background-repeat: no-repeat;
+    background-blend-mode: hard-light;
+    animation: RedknappAni $aniTime ease-out infinite;
+}
+
+.avb {
+    background: url('<%= path %>/assets/imgs/avb.jpg');
+    opacity: 0;
+    background-repeat: no-repeat;
+    background-blend-mode: hard-light;
+    animation: AvbAni $aniTime ease-out infinite;
+}
+
+.pochettino {
+    background: url('<%= path %>//assets/imgs/pochettino.jpg');
+    opacity: 0;
+    background-repeat: no-repeat;
+    background-blend-mode: hard-light;
+    animation: PochettinoAni $aniTime ease-out infinite;
+}
+
+.mgr-slide {
+    position: absolute;
+    width: 100%;
+    max-width: 650px;
+    height: 578px;
+
+}
+
+
+@keyframes GrahamArseAni {
+    0% {
+        opacity: 0;
+    }
+    1% {
+        opacity: 1;
+    }
+    /* Start */
+    11% {
+        opacity: 1;
+    }
+    /* Continue */
+    12% {
+        opacity: 0;
+    }
+    /* Continue */
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes riochAni {
+    0% {
+        opacity: 0;
+    }
+    12% {
+        opacity: 0;
+    }
+    13% {
+        opacity: 1;
+    }
+    /* Start */
+    15% {
+        opacity: 1;
+    }
+    /* Continue */
+    16% {
+        opacity: 0;
+    }
+    /* Continue */
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes wengerOneAni {
+    0% {
+        opacity: 0;
+    }
+    16% {
+        opacity: 0;
+    }
+    17% {
+        opacity: 1;
+    }
+    /* Start */
+    31% {
+        opacity: 1;
+    }
+    /* Continue */
+    32% {
+        opacity: 0;
+    }
+    /* Continue */
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes wengerTwoAni {
+    0% {
+        opacity: 0;
+    }
+    32% {
+        opacity: 0;
+    }
+    33% {
+        opacity: 1;
+    }
+    /* Start */
+    43% {
+        opacity: 1;
+    }
+    /* Continue */
+    44% {
+        opacity: 0;
+    }
+    /* Continue */
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes wengerThreeAni {
+    0% {
+        opacity: 0;
+    }
+    44% {
+        opacity: 0;
+    }
+    45% {
+        opacity: 1;
+    }
+    /* Start */
+    63% {
+        opacity: 1;
+    }
+    /* Continue */
+    64% {
+        opacity: 0;
+    }
+    /* Continue */
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes wengerFourAni {
+    0% {
+        opacity: 0;
+    }
+    64% {
+        opacity: 0;
+    }
+    65% {
+        opacity: 1;
+    }
+    /* Start */
+    73% {
+        opacity: 1;
+    }
+    /* Continue */
+    74% {
+        opacity: 0;
+    }
+    /* Continue */
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes wengerFiveAni {
+    0% {
+        opacity: 0;
+    }
+    74% {
+        opacity: 0;
+    }
+    75% {
+        opacity: 1;
+    }
+    /* Start */
+    95% {
+        opacity: 1;
+    }
+    /* Continue */
+    96% {
+        opacity: 0;
+    }
+    /* Continue */
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes wengerSixAni {
+    0% {
+        opacity: 0;
+    }
+    96% {
+        opacity: 0;
+    }
+    /* Start */
+    97% {
+        opacity: 1;
+    }
+    /* Continue */
+    99% {
+        opacity: 1;
+    }
+    /* Continue */
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes VenablesAni {
+    0% {
+        opacity: 0;
+    }
+    1% {
+        opacity: 1;
+    }
+    /* Start */
+    3% {
+        opacity: 1;
+    }
+    /* Continue */
+    4% {
+        opacity: 0;
+    }
+    /* Continue */
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes ArdilesAni {
+    0% {
+        opacity: 0;
+    }
+    4% {
+        opacity: 0;
+    }
+    5% {
+        opacity: 1;
+    }
+    /* Start */
+    7% {
+        opacity: 1;
+    }
+    /* Continue */
+    8% {
+        opacity: 0;
+    }
+    /* Continue */
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes FrancisAni {
+    0% {
+        opacity: 0;
+    }
+    8% {
+        opacity: 0;
+    }
+    9% {
+        opacity: 1;
+    }
+    /* Start */
+    19% {
+        opacity: 1;
+    }
+    /* Continue */
+    20% {
+        opacity: 0;
+    }
+    /* Continue */
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes GrossAni {
+    0% {
+        opacity: 0;
+    }
+    20% {
+        opacity: 0;
+    }
+    21% {
+        opacity: 1;
+    }
+    /* Start */
+    23% {
+        opacity: 1;
+    }
+    /* Continue */
+    24% {
+        opacity: 0;
+    }
+    /* Continue */
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes GrahamSpursAni {
+    0% {
+        opacity: 0;
+    }
+    24% {
+        opacity: 0;
+    }
+    25% {
+        opacity: 1;
+    }
+    /* Start */
+    35% {
+        opacity: 1;
+    }
+    /* Continue */
+    36% {
+        opacity: 0;
+    }
+    /* Continue */
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes HoddleAni {
+    0% {
+        opacity: 0;
+    }
+    36% {
+        opacity: 0;
+    }
+    37% {
+        opacity: 1;
+    }
+    /* Start */
+    47% {
+        opacity: 1;
+    }
+    /* Continue */
+    48% {
+        opacity: 0;
+    }
+    /* Continue */
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes JolAni {
+    0% {
+        opacity: 0;
+    }
+    48% {
+        opacity: 0;
+    }
+    49% {
+        opacity: 1;
+    }
+    /* Start */
+    59% {
+        opacity: 1;
+    }
+    /* Continue */
+    60% {
+        opacity: 0;
+    }
+    /* Continue */
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes RamosAni {
+    0% {
+        opacity: 0;
+    }
+    60% {
+        opacity: 0;
+    }
+    61% {
+        opacity: 1;
+    }
+    /* Start */
+    67% {
+        opacity: 1;
+    }
+    /* Continue */
+    68% {
+        opacity: 0;
+    }
+    /* Continue */
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes RedknappAni {
+    0% {
+        opacity: 0;
+    }
+    68% {
+        opacity: 0;
+    }
+    69% {
+        opacity: 1;
+    }
+    /* Start */
+    77% {
+        opacity: 1;
+    }
+    /* Continue */
+    78% {
+        opacity: 0;
+    }
+    /* Continue */
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes AvbAni {
+    0% {
+        opacity: 0;
+    }
+    78% {
+        opacity: 0;
+    }
+    79% {
+        opacity: 1;
+    }
+    /* Start */
+    81% {
+        opacity: 1;
+    }
+    /* Continue */
+    82% {
+        opacity: 0;
+    }
+    /* Continue */
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes SherwoodAni {
+    0% {
+        opacity: 0;
+    }
+    82% {
+        opacity: 0;
+    }
+    83% {
+        opacity: 1;
+    }
+    /* Start */
+    85% {
+        opacity: 1;
+    }
+    /* Continue */
+    86% {
+        opacity: 0;
+    }
+    /* Continue */
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes PochettinoAni {
+    0% {
+        opacity: 0;
+    }
+    85% {
+        opacity: 0;
+    }
+    86% {
+        opacity: 1;
+    }
+    /* Start */
+    97% {
+        opacity: 1;
+    }
+    /* Continue */
+    99% {
+        opacity: 1;
+    }
+    /* Continue */
+    100% {
+        opacity: 0;
+    }
+    /* Stop */
+}
+
+// Y			A 			T 
+// 92			Graham 		Venables  0 ----   	0%  { opacity: 0; }   1% { opacity: 1; }/* Start */   3% { opacity: 1; }/* Continue */   4% { opacity: 0; }/* Continue */   100%{ opacity: 0; }
+// 93						Arddiles			0%  { opacity: 0; }   4%  { opacity: 0; }   5% { opacity: 1; }/* Start */   7% { opacity: 1; }/* Continue */   8% { opacity: 0; }/* Continue */   100%{ opacity: 0; }
+// 94						francis				0%  { opacity: 0; }   8%  { opacity: 0; }   9% { opacity: 1; }/* Start */   11% { opacity: 1; }/* Continue */   12% { opacity: 0; }/* Continue */   100%{ opacity: 0; }
+// 95			rioch		 					0%  { opacity: 0; }   12%  { opacity: 0; }   13% { opacity: 1; }/* Start */   15% { opacity: 1; }/* Continue */   16% { opacity: 0; }/* Continue */   100%{ opacity: 0; }			
+// 96			wenger_1997 					0%  { opacity: 0; }   16%  { opacity: 0; }   17% { opacity: 1; }/* Start */   19% { opacity: 1; }/* Continue */   20% { opacity: 0; }/* Continue */   100%{ opacity: 0; }
+// 97						gross 				0%  { opacity: 0; }   20%  { opacity: 0; }   21% { opacity: 1; }/* Start */   23% { opacity: 1; }/* Continue */   24% { opacity: 0; }/* Continue */   100%{ opacity: 0; }
+// 98						graham 				0%  { opacity: 0; }   24%  { opacity: 0; }   25% { opacity: 1; }/* Start */   27% { opacity: 1; }/* Continue */   28% { opacity: 0; }/* Continue */   100%{ opacity: 0; } 
+// 99											0%  { opacity: 0; }   28%  { opacity: 0; }   29% { opacity: 1; }/* Start */   31% { opacity: 1; }/* Continue */   32% { opacity: 0; }/* Continue */   100%{ opacity: 0; }					
+// 00			wenger_2000 					0%  { opacity: 0; }   32%  { opacity: 0; }   33% { opacity: 1; }/* Start */   35% { opacity: 1; }/* Continue */   36% { opacity: 0; }/* Continue */   100%{ opacity: 0; }
+// 01						Hoddle 				0%  { opacity: 0; }   36%  { opacity: 0; }   37% { opacity: 1; }/* Start */   39% { opacity: 1; }/* Continue */   40% { opacity: 0; }/* Continue */   100%{ opacity: 0; }
+// 02											0%  { opacity: 0; }   40%  { opacity: 0; }   41% { opacity: 1; }/* Start */   43% { opacity: 1; }/* Continue */   44% { opacity: 0; }/* Continue */   100%{ opacity: 0; }
+// 03			wenger_2004						0%  { opacity: 0; }   44%  { opacity: 0; }   45% { opacity: 1; }/* Start */   47% { opacity: 1; }/* Continue */   48% { opacity: 0; }/* Continue */   100%{ opacity: 0; }
+// 04			 			jol 				0%  { opacity: 0; }   48%  { opacity: 0; }   49% { opacity: 1; }/* Start */   51% { opacity: 1; }/* Continue */   52% { opacity: 0; }/* Continue */   100%{ opacity: 0; }				
+// 05											0%  { opacity: 0; }   52%  { opacity: 0; }   53% { opacity: 1; }/* Start */   55% { opacity: 1; }/* Continue */   56% { opacity: 0; }/* Continue */   100%{ opacity: 0; }
+// 06											0%  { opacity: 0; }   56%  { opacity: 0; }   57% { opacity: 1; }/* Start */   59% { opacity: 1; }/* Continue */   60% { opacity: 0; }/* Continue */   100%{ opacity: 0; }
+// 07						Ramos 				0%  { opacity: 0; }   60%  { opacity: 0; }   61% { opacity: 1; }/* Start */   63% { opacity: 1; }/* Continue */   64% { opacity: 0; }/* Continue */   100%{ opacity: 0; }
+// 08			wenger_2008						0%  { opacity: 0; }   64%  { opacity: 0; }   65% { opacity: 1; }/* Start */   67% { opacity: 1; }/* Continue */   68% { opacity: 0; }/* Continue */   100%{ opacity: 0; }
+// 09						Redkanpp			0%  { opacity: 0; }   68%  { opacity: 0; }   69% { opacity: 1; }/* Start */   71% { opacity: 1; }/* Continue */   72% { opacity: 0; }/* Continue */   100%{ opacity: 0; }
+// 10 											0%  { opacity: 0; }   72%  { opacity: 0; }   71% { opacity: 1; }/* Start */   73% { opacity: 1; }/* Continue */   74% { opacity: 0; }/* Continue */   100%{ opacity: 0; }
+// 11			wenger_2012 					0%  { opacity: 0; }   74%  { opacity: 0; }   75% { opacity: 1; }/* Start */   77% { opacity: 1; }/* Continue */   78% { opacity: 0; }/* Continue */   100%{ opacity: 0; }
+// 12 						AVB 				0%  { opacity: 0; }   78%  { opacity: 0; }   79% { opacity: 1; }/* Start */   81% { opacity: 1; }/* Continue */   82% { opacity: 0; }/* Continue */   100%{ opacity: 0; } 
+// 13						Sherwood			0%  { opacity: 0; }   82%  { opacity: 0; }   83% { opacity: 1; }/* Start */   85% { opacity: 1; }/* Continue */   86% { opacity: 0; }/* Continue */   100%{ opacity: 0; }
+// 14						Poch 				0%  { opacity: 0; }   86%  { opacity: 0; }   87% { opacity: 1; }/* Start */   89% { opacity: 1; }/* Continue */   90% { opacity: 0; }/* Continue */   100%{ opacity: 0; }
+// 15											0%  { opacity: 0; }   92%  { opacity: 0; }   93% { opacity: 1; }/* Start */   95% { opacity: 1; }/* Continue */   96% { opacity: 0; }/* Continue */   100%{ opacity: 0; }
+// 16			wenger_2017						0%  { opacity: 0; }   96%  { opacity: 0; }/* Start */   97% { opacity: 1; }/* Continue */     99% { opacity: 1; }/* Continue */   100% { opacity: 0; }/* Stop */  
+// 17

@@ -25,12 +25,10 @@ function formatData(d){
 
 function findPips(){
 
-
-
 		[].slice.apply(document.querySelectorAll('.gv-list-item')).forEach(el => {
         //var data = el.className.replace('share-','');
 
-        let s = el.className.split(" ")[1];
+        let s = el.getAttribute("data-scorer");
 
         var pips = el.querySelectorAll('.gv-goal-pip');
         
@@ -45,15 +43,16 @@ function findPips(){
 }
 
 function highlightPips(s,pips){
-	console.log(s);
+	// console.log(s);
 
 	[].slice.apply(pips).forEach(el => {
         //var data = el.className.replace('share-','');
 
-    
+    	//console.log(s==el.getAttribute("data-scorer"),s,el.getAttribute("data-scorer"))
 
-        if(el.classList.contains(s)){
-        	el.classList.add("hl-pip")
+
+        if(s == el.getAttribute("data-scorer")){
+        	el.getAttribute("data-club") == "Arsenal" ? el.classList.add("arsenal") :  el.classList.add("spurs") 
         }
 
 

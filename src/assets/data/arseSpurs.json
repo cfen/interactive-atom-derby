@@ -1,0 +1,494 @@
+{
+  "matches": [
+        {
+          "Venue": "Spurs",
+          "Date": "12 December 1992",
+          "tMgr": "Terry Venables",
+          "Score": "1–0",
+          "Arsenal goalscorers": "",
+          "Tottenham goalscorers": "Allen 20'",
+          "Attendance": "33,707",
+          "aMgr": "George Graham"
+        },
+        {
+          "Venue": "Arsenal",
+          "Date": "11 May 1993",
+          "tMgr": "Terry Venables",
+          "Score": "1–3",
+          "Arsenal goalscorers": "Dickov 52'",
+          "Tottenham goalscorers": "Sheringham 39', Hendry 46', Hendry 78'",
+          "Attendance": "26,393",
+          "aMgr": "George Graham"
+        },
+        {
+          "Venue": "Spurs",
+          "Date": "16 August 1993",
+          "tMgr": "Ossie Ardiles",
+          "Score": "0–1",
+          "Arsenal goalscorers": "Wright 87'",
+          "Tottenham goalscorers": "",
+          "Attendance": "28,355",
+          "aMgr": "George Graham"
+        },
+        {
+          "Venue": "Arsenal",
+          "Date": "6 December 1993",
+          "tMgr": "Ossie Ardiles",
+          "Score": "1–1",
+          "Arsenal goalscorers": "Wright 65'",
+          "Tottenham goalscorers": "Anderton 25'",
+          "Attendance": "35,669",
+          "aMgr": "Bruce Rioch"
+        },
+        {
+          "Venue": "Spurs",
+          "Date": "2 January 1995",
+          "tMgr": "Gerry Francis",
+          "Score": "1–0",
+          "Arsenal goalscorers": "",
+          "Tottenham goalscorers": "Popescu 22'",
+          "Attendance": "28,747",
+          "aMgr": "Arsene Wenger"
+        },
+        {
+          "Venue": "Arsenal",
+          "Date": "29 April 1995",
+          "tMgr": "Gerry Francis",
+          "Score": "1–1",
+          "Arsenal goalscorers": "Wright 61' (pen.)",
+          "Tottenham goalscorers": "Klinsmann 74'",
+          "Attendance": "38,337",
+          "aMgr": "Arsene Wenger"
+        },
+        {
+          "Venue": "Spurs",
+          "Date": "18 November 1995",
+          "tMgr": "Gerry Francis",
+          "Score": "2–1",
+          "Arsenal goalscorers": "Bergkamp 14'",
+          "Tottenham goalscorers": "Sheringham 29', Armstrong 54'",
+          "Attendance": "32,894",
+          "aMgr": "Arsene Wenger"
+        },
+        {
+          "Venue": "Arsenal",
+          "Date": "15 April 1996",
+          "tMgr": "Gerry Francis",
+          "Score": "0–0",
+          "Arsenal goalscorers": "",
+          "Tottenham goalscorers": "",
+          "Attendance": "38,273",
+          "aMgr": "Arsene Wenger"
+        },
+        {
+          "Venue": "Arsenal",
+          "Date": "24 November 1996",
+          "tMgr": "Gerry Francis",
+          "Score": "3–1",
+          "Arsenal goalscorers": "Wright 28' (pen.), Adams 87', Bergkamp 89'",
+          "Tottenham goalscorers": "Sinton 57'",
+          "Attendance": "38,264",
+          "aMgr": "Arsene Wenger"
+        },
+        {
+          "Venue": "Spurs",
+          "Date": "15 February 1997",
+          "tMgr": "Gerry Francis",
+          "Score": "0–0",
+          "Arsenal goalscorers": "",
+          "Tottenham goalscorers": "",
+          "Attendance": "33,039",
+          "aMgr": "Arsene Wenger"
+        },
+        {
+          "Venue": "Arsenal",
+          "Date": "30 August 1997",
+          "tMgr": "Christian Gross",
+          "Score": "0–0",
+          "Arsenal goalscorers": "",
+          "Tottenham goalscorers": "",
+          "Attendance": "38,102",
+          "aMgr": "Arsene Wenger"
+        },
+        {
+          "Venue": "Spurs",
+          "Date": "28 December 1997",
+          "tMgr": "Christian Gross",
+          "Score": "1–1",
+          "Arsenal goalscorers": "Parlour 62'",
+          "Tottenham goalscorers": "Nielsen 28'",
+          "Attendance": "29,610",
+          "aMgr": "Arsene Wenger"
+        },
+        {
+          "Venue": "Arsenal",
+          "Date": "14 November 1998",
+          "tMgr": "George Graham",
+          "Score": "0–0",
+          "Arsenal goalscorers": "",
+          "Tottenham goalscorers": "",
+          "Attendance": "38,278",
+          "aMgr": "Arsene Wenger"
+        },
+        {
+          "Venue": "Spurs",
+          "Date": "5 May 1999",
+          "tMgr": "George Graham",
+          "Score": "1–3",
+          "Arsenal goalscorers": "Petit 17', Anelka 33', Kanu 85'",
+          "Tottenham goalscorers": "Anderton 43'",
+          "Attendance": "36,019",
+          "aMgr": "Arsene Wenger"
+        },
+        {
+          "Venue": "Spurs",
+          "Date": "7 November 1999",
+          "tMgr": "George Graham",
+          "Score": "2–1",
+          "Arsenal goalscorers": "Vieira 39'",
+          "Tottenham goalscorers": "Iversen 7', Sherwood 20'",
+          "Attendance": "36,085",
+          "aMgr": "Arsene Wenger"
+        },
+        {
+          "Venue": "Arsenal",
+          "Date": "19 March 2000",
+          "tMgr": "George Graham",
+          "Score": "2–1",
+          "Arsenal goalscorers": "Armstrong 20' (o.g.), Henry 45' (pen.)",
+          "Tottenham goalscorers": "Armstrong 3'",
+          "Attendance": "38,131",
+          "aMgr": "Arsene Wenger"
+        },
+        {
+          "Venue": "Spurs",
+          "Date": "18 December 2000",
+          "tMgr": "George Graham",
+          "Score": "1–1",
+          "Arsenal goalscorers": "Vieira 89'",
+          "Tottenham goalscorers": "Rebrov 31'",
+          "Attendance": "36,062",
+          "aMgr": "Arsene Wenger"
+        },
+        {
+          "Venue": "Arsenal",
+          "Date": "31 March 2001",
+          "tMgr": "George Graham",
+          "Score": "2–0",
+          "Arsenal goalscorers": "Pirès 70', Henry 87'",
+          "Tottenham goalscorers": "",
+          "Attendance": "38,121",
+          "aMgr": "Arsene Wenger"
+        },
+        {
+          "Venue": "Spurs",
+          "Date": "17 November 2001",
+          "tMgr": "Glen Hoddle",
+          "Score": "1–1",
+          "Arsenal goalscorers": "Pirès 81'",
+          "Tottenham goalscorers": "Poyet 90'",
+          "Attendance": "36,049",
+          "aMgr": "Arsene Wenger"
+        },
+        {
+          "Venue": "Arsenal",
+          "Date": "6 April 2002",
+          "tMgr": "Glen Hoddle",
+          "Score": "2–1",
+          "Arsenal goalscorers": "Ljungberg 25', Lauren 86' (pen.)",
+          "Tottenham goalscorers": "Sheringham 81' (pen.)",
+          "Attendance": "38,186",
+          "aMgr": "Arsene Wenger"
+        },
+        {
+          "Venue": "Arsenal",
+          "Date": "16 November 2002",
+          "tMgr": "Glen Hoddle",
+          "Score": "3–0",
+          "Arsenal goalscorers": "Henry 13', Ljungberg 55', Wiltord 71'",
+          "Tottenham goalscorers": "",
+          "Attendance": "38,152",
+          "aMgr": "Arsene Wenger"
+        },
+        {
+          "Venue": "Spurs",
+          "Date": "15 December 2002",
+          "tMgr": "Glen Hoddle",
+          "Score": "1-1",
+          "Arsenal goalscorers": "Pirès 45' (pen.)",
+          "Tottenham goalscorers": "Ziege 11'",
+          "Attendance": "36,076",
+          "aMgr": "Arsene Wenger"
+        },
+        {
+          "Venue": "Arsenal",
+          "Date": "8 November 2003",
+          "tMgr": "Martin Jol",
+          "Score": "2–1",
+          "Arsenal goalscorers": "Pirès 69', Ljungberg 79'",
+          "Tottenham goalscorers": "Anderton 5'",
+          "Attendance": "38,101",
+          "aMgr": "Arsene Wenger"
+        },
+        {
+          "Venue": "Spurs",
+          "Date": "25 April 2004",
+          "tMgr": "Martin Jol",
+          "Score": "2–2",
+          "Arsenal goalscorers": "Vieira 3', Pirès 35'",
+          "Tottenham goalscorers": "Redknapp 62', Keane 90' (pen.)",
+          "Attendance": "36,097",
+          "aMgr": "Arsene Wenger"
+        },
+        {
+          "Venue": "Spurs",
+          "Date": "13 November 2004",
+          "tMgr": "Martin Jol",
+          "Score": "4–5",
+          "Arsenal goalscorers": "Henry 45', Lauren 55' (pen.), Vieira 60', Ljungberg 69, Pirès 81'",
+          "Tottenham goalscorers": "Naybet 37', Defoe 61', King 74', Kanouté 88'",
+          "Attendance": "36,095",
+          "aMgr": "Arsene Wenger"
+        },
+        {
+          "Venue": "Arsenal",
+          "Date": "25 April 2005",
+          "tMgr": "Martin Jol",
+          "Score": "1–0",
+          "Arsenal goalscorers": "Reyes 22'",
+          "Tottenham goalscorers": "",
+          "Attendance": "38,147",
+          "aMgr": "Arsene Wenger"
+        },
+        {
+          "Venue": "Spurs",
+          "Date": "29 October 2005",
+          "tMgr": "Martin Jol",
+          "Score": "1–1",
+          "Arsenal goalscorers": "Pirès 77'",
+          "Tottenham goalscorers": "King 17'",
+          "Attendance": "36,154",
+          "aMgr": "Arsene Wenger"
+        },
+        {
+          "Venue": "Arsenal",
+          "Date": "22 April 2006",
+          "tMgr": "Martin Jol",
+          "Score": "1–1",
+          "Arsenal goalscorers": "Henry 84'",
+          "Tottenham goalscorers": "Keane 66'",
+          "Attendance": "38,326",
+          "aMgr": "Arsene Wenger"
+        },
+        {
+          "Venue": "Arsenal",
+          "Date": "2 December 2006",
+          "tMgr": "Martin Jol",
+          "Score": "3–0",
+          "Arsenal goalscorers": "Adebayor 20', Gilberto 42' (pen.), Gilberto 72' (pen.)",
+          "Tottenham goalscorers": "",
+          "Attendance": "60,115",
+          "aMgr": "Arsene Wenger"
+        },
+        {
+          "Venue": "Spurs",
+          "Date": "21 April 2007",
+          "tMgr": "Martin Jol",
+          "Score": "2–2",
+          "Arsenal goalscorers": "Touré 64', Adebayor 78'",
+          "Tottenham goalscorers": "Keane 30', Jenas 90'",
+          "Attendance": "36,050",
+          "aMgr": "Arsene Wenger"
+        },
+        {
+          "Venue": "Spurs",
+          "Date": "15 September 2007",
+          "tMgr": "Juande Ramos",
+          "Score": "1–3",
+          "Arsenal goalscorers": "Adebayor 65', Adebayor 90', Fàbregas 80'",
+          "Tottenham goalscorers": "Bale 15'",
+          "Attendance": "36,053",
+          "aMgr": "Arsene Wenger"
+        },
+        {
+          "Venue": "Arsenal",
+          "Date": "22 December 2007",
+          "tMgr": "Juande Ramos",
+          "Score": "2–1",
+          "Arsenal goalscorers": "Adebayor 47', Bendtner 75'",
+          "Tottenham goalscorers": "Berbatov 65'",
+          "Attendance": "60,087",
+          "aMgr": "Arsene Wenger"
+        },
+        {
+          "Venue": "Arsenal",
+          "Date": "29 October 2008",
+          "tMgr": "Harry Redknapp",
+          "Score": "4–4",
+          "Arsenal goalscorers": "Silvestre 37', Gallas 46, Adebayor 64', van-Persie 68'",
+          "Tottenham goalscorers": "Bentley 13', Bent 65', Jenas 89', Lennon 90'",
+          "Attendance": "60,043",
+          "aMgr": "Arsene Wenger"
+        },
+        {
+          "Venue": "Spurs",
+          "Date": "8 February 2009",
+          "tMgr": "Harry Redknapp",
+          "Score": "0–0",
+          "Arsenal goalscorers": "",
+          "Tottenham goalscorers": "",
+          "Attendance": "36,021",
+          "aMgr": "Arsene Wenger"
+        },
+        {
+          "Venue": "Arsenal",
+          "Date": "31 October 2009",
+          "tMgr": "Harry Redknapp",
+          "Score": "3–0",
+          "Arsenal goalscorers": "van-Persie 42', van-Persie 60', Fàbregas 43'",
+          "Tottenham goalscorers": "",
+          "Attendance": "60,103",
+          "aMgr": "Arsene Wenger"
+        },
+        {
+          "Venue": "Spurs",
+          "Date": "14 April 2010",
+          "tMgr": "Harry Redknapp",
+          "Score": "2–1",
+          "Arsenal goalscorers": "Bendtner 85'",
+          "Tottenham goalscorers": "Rose 10', Bale 47'",
+          "Attendance": "36,041",
+          "aMgr": "Arsene Wenger"
+        },
+        {
+          "Venue": "Arsenal",
+          "Date": "20 November 2010",
+          "tMgr": "Harry Redknapp",
+          "Score": "2–3",
+          "Arsenal goalscorers": "Nasri 9', Chamakh 27'",
+          "Tottenham goalscorers": "Bale 50', van-der-Vaart 67' (pen.), Kaboul 86'",
+          "Attendance": "60,102",
+          "aMgr": "Arsene Wenger"
+        },
+        {
+          "Venue": "Spurs",
+          "Date": "20 April 2011",
+          "tMgr": "Harry Redknapp",
+          "Score": "3–3",
+          "Arsenal goalscorers": "Walcott 5', Nasri 12', van-Persie 40'",
+          "Tottenham goalscorers": "van-der-Vaart 7', van-der-Vaart 70' (pen.), Huddlestone 44'",
+          "Attendance": "36,138",
+          "aMgr": "Arsene Wenger"
+        },
+        {
+          "Venue": "Spurs",
+          "Date": "2 October 2011",
+          "tMgr": "Harry Redknapp",
+          "Score": "2–1",
+          "Arsenal goalscorers": "Ramsey 51'",
+          "Tottenham goalscorers": "van-der-Vaart 40', Walker 73'",
+          "Attendance": "36,274",
+          "aMgr": "Arsene Wenger"
+        },
+        {
+          "Venue": "Arsenal",
+          "Date": "26 February 2012",
+          "tMgr": "Harry Redknapp",
+          "Score": "5–2",
+          "Arsenal goalscorers": "Sagna 40', van-Persie 43', Rosický 51', Walcott 65', Walcott 68'",
+          "Tottenham goalscorers": "Saha 4', Adebayor 34' (pen.)",
+          "Attendance": "60,106",
+          "aMgr": "Arsene Wenger"
+        },
+        {
+          "Venue": "Arsenal",
+          "Date": "17 November 2012",
+          "tMgr": "Andre Villas-Boas",
+          "Score": "5–2",
+          "Arsenal goalscorers": "Mertesacker 24', Podolski 42', Giroud 45', Cazorla 60', Walcott 90'",
+          "Tottenham goalscorers": "Adebayor 10', Bale 71'",
+          "Attendance": "60,111",
+          "aMgr": "Arsene Wenger"
+        },
+        {
+          "Venue": "Spurs",
+          "Date": "3 March 2013",
+          "tMgr": "Andre Villas-Boas",
+          "Score": "2–1",
+          "Arsenal goalscorers": "Mertesacker 51'",
+          "Tottenham goalscorers": "Bale 37', Lennon 39'",
+          "Attendance": "36,170",
+          "aMgr": "Arsene Wenger"
+        },
+        {
+          "Venue": "Arsenal",
+          "Date": "1 September 2013",
+          "tMgr": "Tim Sherwood",
+          "Score": "1–0",
+          "Arsenal goalscorers": "Giroud 23'",
+          "Tottenham goalscorers": "",
+          "Attendance": "60,071",
+          "aMgr": "Arsene Wenger"
+        },
+        {
+          "Venue": "Spurs",
+          "Date": "16 March 2014",
+          "tMgr": "Tim Sherwood",
+          "Score": "0–1",
+          "Arsenal goalscorers": "Rosický 2'",
+          "Tottenham goalscorers": "",
+          "Attendance": "35,711",
+          "aMgr": "Arsene Wenger"
+        },
+        {
+          "Venue": "Arsenal",
+          "Date": "27 September 2014",
+          "tMgr": "Mauricio Pochettino",
+          "Score": "1–1",
+          "Arsenal goalscorers": "Oxlade-Chamberlain 74'",
+          "Tottenham goalscorers": "Chadli 56'",
+          "Attendance": "59,900",
+          "aMgr": "Arsene Wenger"
+        },
+        {
+          "Venue": "Spurs",
+          "Date": "7 February 2015",
+          "tMgr": "Mauricio Pochettino",
+          "Score": "2–1",
+          "Arsenal goalscorers": "Özil 11'",
+          "Tottenham goalscorers": "Kane 55', Kane 86'",
+          "Attendance": "35,659",
+          "aMgr": "Arsene Wenger"
+        },
+        {
+          "Venue": "Arsenal",
+          "Date": "8 November 2015",
+          "tMgr": "Mauricio Pochettino",
+          "Score": "1–1",
+          "Arsenal goalscorers": "Gibbs 77'",
+          "Tottenham goalscorers": "Kane 32'",
+          "Attendance": "60,060",
+          "aMgr": "Arsene Wenger"
+        },
+        {
+          "Venue": "Spurs",
+          "Date": "5 March 2016",
+          "tMgr": "Mauricio Pochettino",
+          "Score": "2–2",
+          "Arsenal goalscorers": "Ramsey 39', Sánchez 76'",
+          "Tottenham goalscorers": "Alderweireld 60', Kane 62'",
+          "Attendance": "35,762",
+          "aMgr": "Arsene Wenger"
+        },
+        {
+          "Venue": "Arsenal",
+          "Date": "6 November 2016",
+          "tMgr": "Mauricio Pochettino",
+          "Score": "1–1",
+          "Arsenal goalscorers": "Wimmer 42' (O.G)",
+          "Tottenham goalscorers": "Kane 51' (pen.)",
+          "Attendance": "60,039",
+          "aMgr": "Arsene Wenger"
+        }
+  ]
+}

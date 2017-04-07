@@ -1,13 +1,3 @@
-// .scorer-slice{
-// 	.scorer-head-name{
-// 		@import fs-headline(6);
-// 	}
-// 	.scorer-head-number{
-// 		@import fs-headline(9);
-// 		font-weight:200;
-// 	}
-// }
-
 .gv-scorer-wrapper {
 		height:auto;
 
@@ -40,17 +30,10 @@
 		    border: 0;
 		}
 
-
-
 }
 
 .home-team-pip, .away-team-pip{
 	opacity:0.8;
-}
-
-.hl-pip{
-	opacity:0.8;
-	color:$accent-color;
 }
 
 .gv-date{
@@ -80,6 +63,7 @@
 }
 
 .pips-holder{
+	position:relative;
 	@include fs-textSans(3);
 	line-height:12px;
 	color:$neutral-3;
@@ -96,29 +80,60 @@
 .gv-list-item{
 	background-position: top right;
     background-repeat: no-repeat;
-    background-size: auto 180px;
+    background-size: auto;
 }
 
-// .list-item-Adebayor{
-// 	background-image: url('<%= path %>/assets/imgs/Adebayor.png');
-// }
+.gv-goal-pip{
+	display:inline-block;
+	width:$gs-baseline*0.75;
+	height:$gs-baseline*0.75;
+	background-color:$neutral-4;
 
-// .list-item-Pires{
-// 	background-image: url('<%= path %>/assets/imgs/Pires.png');
-// }
+}
 
-// .list-item-Kane{
-// 	background-image: url('<%= path %>/assets/imgs/Kane.png');
-// }
+.hl-pip{
+	opacity:0.8;
+	background-color:$accent-color;
+}
 
-// .list-item-Bale{
-// 	background-image: url('<%= path %>/assets/imgs/Bale.png');
-// }
+.spurs{
+	fill:$spurs-color;
+	color:$spurs-color;
+	background-color:$spurs-color;
+}
 
-// .list-item-Henry{
-// 	background-image: url('<%= path %>/assets/imgs/Henry.png');
-// }
+.arsenal{
+	fill:$arsenal-color;
+	color:$arsenal-color;
+	background-color:$arsenal-color;
+}
 
-// .list-item-van-Persie{
-// 	background-image: url('<%= path %>/assets/imgs/van-Persie.png');
-// }
+.neutral-team{
+	fill:$neutral-team-color;
+	color:$neutral-team-color;
+	background-color:$neutral-team-color;
+}
+
+.list-item-Adebayor{
+	background-image: url('<%= path %>/assets/imgs/Adebayor.png');
+}
+
+.list-item-Pires{
+	background-image: url('<%= path %>/assets/imgs/Pires.png');
+}
+
+.list-item-Kane{
+	background-image: url('<%= path %>/assets/imgs/Kane.png');
+}
+
+.list-item-Bale{
+	background-image: url('<%= path %>/assets/imgs/Bale.png');
+}
+
+.list-item-Henry{
+	background-image: url('<%= path %>/assets/imgs/Henry.png');
+}
+
+.list-item-van-Persie{
+	background-image: url('<%= path %>/assets/imgs/van-Persie.png');
+}

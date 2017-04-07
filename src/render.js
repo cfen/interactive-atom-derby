@@ -2,6 +2,7 @@ import Mustache from 'mustache'
 import fs from 'file-system'
 import rp from 'request-promise'
 
+import headSliceTemplate from './src/templates/headSlice.html!text'
 import teamGamesTemplate from './src/templates/teamGames.html!text'
 import teamGoalsTemplate from './src/templates/teamGoals.html!text'
 import scorersTemplate from './src/templates/scorers.html!text'
@@ -15,13 +16,18 @@ var draws = [];
 
 var aCountGoals = 0;
 var tCountGoals = 0;
-
+//remote
+//"https://raw.githubusercontent.com/cfen/merseysideDerby/master/src/assets/data/arseSpurs.json",
 
 export async function render() {
     let data = formatData(await rp({
-        uri: "https://raw.githubusercontent.com/cfen/merseysideDerby/master/src/assets/data/arseSpurs.json",
+        uri: 'https://interactive.guim.co.uk/docsdata-test/1tf32QpWXqQWOvDhN1ycO_cu0mrZzNyGvgmRcQyoQ7ic.json',
         json: true
     }));
+
+    // console.log(data)
+
+    let headSliceHTML = headSliceTemplate;
 
     let teamGamesHTML = Mustache.render(teamGamesTemplate, data);
 
@@ -31,7 +37,7 @@ export async function render() {
 
     fs.writeFileSync("./.build/assets/data/matches.json", JSON.stringify(data));
 
-    return `${teamGamesHTML}${teamGoalsHTML}${scorersHTML}`;
+    return `${headSliceHTML}${teamGamesHTML}${teamGoalsHTML}${scorersHTML}`;
 }
 
 
@@ -48,7 +54,9 @@ function formatData(data) {
 
     var tempID = 0;
 
-    let allMatches = data.matches.map((match) => {
+    let allMatches = data.sheets.Sheet1.map((match) => {
+
+
         match.aGoals = getGoals(match['Arsenal goalscorers'], match);
         match.tGoals = getGoals(match['Tottenham goalscorers'], match);
         match.ID = tempID;
@@ -59,6 +67,7 @@ function formatData(data) {
         match.outcome = getOutcome(match);
         match.aGoalsTally = match.aGoals.length;
         match.tGoalsTally = match.tGoals.length;
+
         aCountGoals += match.aGoals.length;
         tCountGoals += match.tGoals.length;
 
@@ -128,10 +137,7 @@ function getPrintResult(match) {
     if (match.Venue == 'Spurs') {  t = "Tottenham " + " " + match.tGoals.length + " – " + match.aGoals.length + " Arsenal" }
     else if (match.Venue == 'Arsenal')  {  t = "Arsenal " + " " + match.aGoals.length + " – " + match.tGoals.length + " Tottenham" }
 
-
-
     return  t;
-
 }
 
 function getMobilePrintResult(match) {
@@ -147,15 +153,12 @@ function getTopScorerChart(a) {
 
     let minGoals = 5;
 
-
     for (var i = 0; i < a.length; i++) {
         a[i].matches.sort(function(a, b) {
             // Turn your strings into dates, and then subtract them
             // to get a value that is either negative, positive, or zero.
             return new Date(b.Date) - new Date(a.Date);
         });
-
-
 
         if (a[i].goalTally >= minGoals) { temp.push(a[i]) }
 
@@ -188,13 +191,10 @@ function getGoals(s, m) {
 	            	goals.push(goal);
 	        	}
         	}
-
-
-            
+     
     }
 
     return goals;
-
 
 }
 
@@ -212,6 +212,7 @@ function checkGoalTotals(s, m) {
         newObj.matches.push(m);
         scorersTotal.push(newObj);
         scorerFound = true;
+
     } else {
         for (var i = 0; i < scorersTotal.length; i++) {
             if (scorersTotal[i].scorer == s) {
@@ -234,8 +235,4 @@ function checkGoalTotals(s, m) {
         scorerFound = true;
     }
 
-}
-
-export function packageData(data){
-    return data;
 }
