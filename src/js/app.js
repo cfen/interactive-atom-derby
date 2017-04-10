@@ -1,45 +1,25 @@
 //'<%= path %>/assets/data/matches.json'
+import attendanceChart from './lib/attendanceChart'
 
 
+// var parseTime = d3.timeParse("%B %d, %Y");
 function init(){
-
-		var xhr = new XMLHttpRequest();
-		xhr.onreadystatechange = function() {
-		    if (xhr.readyState == XMLHttpRequest.DONE) {
-		        formatData(JSON.parse(xhr.responseText));
-		    }
-		}
-		xhr.open('GET', '<%= path %>/assets/data/matches.json', true);
-		xhr.send(null);
-
-
-		
+	addView();
+	let attendanceChartRender = attendanceChart();
+	console.log(attendanceChartRender);	
 }
 
-function formatData(d){
-	console.log(d);
-
-	findPips()
-
+function addView(){
+	findPips();
 }
 
 function findPips(){
-
 		[].slice.apply(document.querySelectorAll('.gv-list-item')).forEach(el => {
-        //var data = el.className.replace('share-','');
-
-        let s = el.getAttribute("data-scorer");
-
-        var pips = el.querySelectorAll('.gv-goal-pip');
-        
-        highlightPips(s,pips)
-
-
+	        let s = el.getAttribute("data-scorer");
+	        var pips = el.querySelectorAll('.gv-goal-pip');	        
+	        highlightPips(s,pips);
     });
 
-
-
-		
 }
 
 function highlightPips(s,pips){
@@ -47,15 +27,11 @@ function highlightPips(s,pips){
 
 	[].slice.apply(pips).forEach(el => {
         //var data = el.className.replace('share-','');
-
-    	//console.log(s==el.getAttribute("data-scorer"),s,el.getAttribute("data-scorer"))
-
+    	//console.log(s==el.getAttribute("data-scorer"),s,el.getAttribute("data-scorer"));
 
         if(s == el.getAttribute("data-scorer")){
         	el.getAttribute("data-club") == "Arsenal" ? el.classList.add("arsenal") :  el.classList.add("spurs") 
         }
-
-
 
     });
 }

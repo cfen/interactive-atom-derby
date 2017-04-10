@@ -11,13 +11,13 @@ $neutral-team-color: $neutral-4;
 
 @import "headSlice";
 @import "scorerslice";
+@import "attendanceChart";
 
 //Uncomment for embeds
 //@import "embed";
 
 //Uncomment for full screen (including immersive article main media)
 @import "fullscreen";
-
 
 
 .element-atom,
@@ -109,9 +109,6 @@ h4, h5{
 	}
 }
 
-
-
-
 .gv-section-title {
 	width:100%;
 	float:none;
@@ -157,7 +154,6 @@ h4, h5{
 	    	max-width: 620px;
 	 	}
 
-	
 }
 
 .inactive{

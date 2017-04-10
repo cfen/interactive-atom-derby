@@ -6,16 +6,20 @@ import headSliceTemplate from './src/templates/headSlice.html!text'
 import teamGamesTemplate from './src/templates/teamGames.html!text'
 import teamGoalsTemplate from './src/templates/teamGoals.html!text'
 import scorersTemplate from './src/templates/scorers.html!text'
+import attendanceTemplate from './src/templates/attendances.html!text'
 import { whitespaceFixRemoveSpaceAndAccents } from './js/lib/utils'
-
 
 var scorersTotal = [];
 var aWins = [];
 var tWins = [];
 var draws = [];
 
+var attendances = [];
+
 var aCountGoals = 0;
 var tCountGoals = 0;
+
+
 //remote
 //"https://raw.githubusercontent.com/cfen/merseysideDerby/master/src/assets/data/arseSpurs.json",
 
@@ -25,7 +29,7 @@ export async function render() {
         json: true
     }));
 
-    // console.log(data)
+   // console.log(data.matches)
 
     let headSliceHTML = headSliceTemplate;
 
@@ -35,9 +39,11 @@ export async function render() {
 
     let scorersHTML = Mustache.render(scorersTemplate, {  "data": data.scorerChart });
 
+    let attendancesHTML = Mustache.render(attendanceTemplate, { "data": data.attendances })
+
     fs.writeFileSync("./.build/assets/data/matches.json", JSON.stringify(data));
 
-    return `${headSliceHTML}${teamGamesHTML}${teamGoalsHTML}${scorersHTML}`;
+    return `${attendancesHTML}${scorersHTML}${teamGamesHTML}${teamGoalsHTML}${headSliceHTML}`;
 }
 
 
@@ -56,7 +62,6 @@ function formatData(data) {
 
     let allMatches = data.sheets.Sheet1.map((match) => {
 
-
         match.aGoals = getGoals(match['Arsenal goalscorers'], match);
         match.tGoals = getGoals(match['Tottenham goalscorers'], match);
         match.ID = tempID;
@@ -66,7 +71,7 @@ function formatData(data) {
 
         match.outcome = getOutcome(match);
         match.aGoalsTally = match.aGoals.length;
-        match.tGoalsTally = match.tGoals.length;
+        match.tGoalsTally = match.tGoals.length;       
 
         aCountGoals += match.aGoals.length;
         tCountGoals += match.tGoals.length;
@@ -94,6 +99,16 @@ function formatData(data) {
         if (match.outcome == "tWin") { tWins.push(match) }
         if (match.outcome == "draw") { draws.push(match) }
 
+        var attendance =  {}   
+
+        attendance.homeTeam = match.Venue;
+        attendance.attendancePrint = match.Attendance; 
+        attendance.attendanceNum = Number(match.Attendance.replace(",", "")); 
+        attendance.ID + match.ID;
+        attendance.date = match.Date;
+
+        attendances.push (attendance);    
+
         return match;
     });
 
@@ -113,6 +128,8 @@ function formatData(data) {
     allData.aWinsTally = aWins.length;
     allData.tWinsTally = tWins.length;
     allData.drawsTally = draws.length;
+
+    allData.attendances = attendances;
 
     allData.matches = allMatches;
 

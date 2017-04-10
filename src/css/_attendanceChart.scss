@@ -1,0 +1,100 @@
+$graph-1: $arsenal-color;
+$graph-2: $spurs-color;
+$axis-neutral: $neutral-5;
+
+.attendance-chart {
+	max-width: 760px;
+	min-height: 80px;
+	overflow: hidden;
+	position: relative;
+	@media(min-width:740px){
+		min-height: 400px;
+	}
+
+
+	.customLine {
+		fill: none;
+		stroke-width: 2px;
+
+		&.a {
+			stroke: $graph-1;
+		}
+
+		&.t {
+			stroke: $graph-2;
+		}
+
+		
+		&.dataVisible {
+			stroke-opacity: .25;
+		}
+	}
+
+	.firstTick{
+		stroke-dasharray: none;
+		stroke-width: 1px;
+
+	}
+
+	.tick, .sourceHolder{
+		stroke-width:1px;
+		@include fs-textSans(1);
+		fill: $axis-neutral;
+		// stroke: $axis-neutral !important;
+		shape-rendering: crispEdges;
+		// stroke-dasharray: 1, 5;
+	}
+
+	.tick text{
+		fill: #333;
+		stroke:none;
+	}
+
+	.axes path, .axes line {
+		    fill: none;
+		    stroke: $axis-neutral;
+		    shape-rendering: crispEdges;
+	}
+
+	.customYaxis{
+		fill: none;
+		    stroke: $axis-neutral;
+		    shape-rendering: crispEdges;
+	}
+
+	.customYaxis line , .customXaxis line{
+		fill: none;
+		    stroke: $axis-neutral;
+		    shape-rendering: crispEdges;
+	}
+
+	.customYaxis path{
+		stroke:none;
+	}
+
+	.customXaxis path{
+		stroke: $axis-neutral;
+		    shape-rendering: crispEdges;
+	}
+
+
+	.customCircle {
+		display: none;
+
+		&.customCirclesActive {
+			display: block;
+		}
+	}
+
+
+	.customCircle-a {
+		fill: $graph-1;
+	}
+
+	.customCircle-t {
+		fill: $graph-2;
+	}
+
+
+
+}
