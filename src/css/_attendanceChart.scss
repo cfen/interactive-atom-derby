@@ -12,7 +12,7 @@ $axis-neutral: $neutral-5;
 	}
 
 
-	.customLine {
+	.customLine, .riskLine {
 		fill: none;
 		stroke-width: 2px;
 
@@ -28,6 +28,12 @@ $axis-neutral: $neutral-5;
 		&.dataVisible {
 			stroke-opacity: .25;
 		}
+
+		shape-rendering: crispEdges;
+	}
+
+	.riskLineUser{
+		stroke:none;
 	}
 
 	.firstTick{
@@ -46,7 +52,7 @@ $axis-neutral: $neutral-5;
 	}
 
 	.tick text{
-		fill: #333;
+		fill: $neutral-2;
 		stroke:none;
 	}
 

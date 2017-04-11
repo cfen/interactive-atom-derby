@@ -1,7 +1,10 @@
 import debounce from '../lib/debounce'
 
+import groupArray from 'group-array'
+
 import {
-    line as d3_line
+    line as d3_line,
+    curveStep as d3_curveStep
     //curveBasis as d3_curveBasis
 } from 'd3-shape';
 
@@ -36,10 +39,9 @@ import {
     timeFormat as d3_timeParse
 } from 'd3-time-format';
 
-var parseTime = d3_timeParse("%d-%b-%y"); //("%Y-%m-%d"); //;
+var parseTime = d3_timeParse("%Y-%m-%d"); //("%d-%b-%y"); //;
 
 let dataset, localData;
-
 let svgshell, svg, lines;
 
 
@@ -56,15 +58,12 @@ export default function() {
            for (var i = 0; i < dataset.attendances.length; i++) {
                 dataset.attendances[i].d3Date = parseTime(new Date(dataset.attendances[i].date));
                 //dataset.attendances[i].homeTeam == "Arsenal" ? arsenal.push(dataset.attendances[i]) : spurs.push(dataset.attendances[i]) ;
-
-
-
             }
 
-            localData = dataset.attendances
-            console.log(localData)
-
+            localData = dataset.attendances;
+            console.log(localData);
             buildVisual(localData);
+
         }
     }
 
@@ -73,15 +72,23 @@ export default function() {
 
 
     function buildVisual(data) {    
+    	var container = d3_select(".attendance-chart");
+
+    	console.log(container.node().getBoundingClientRect().width)
+
     	var margin = {top: 20, right: 20, bottom: 30, left: 50},
-		    width = 960 - margin.left - margin.right,
-		    height = 500 - margin.top - margin.bottom;
+		    width = container.node().getBoundingClientRect().width,
+		    height = container.node().getBoundingClientRect().height;
 
 		// parse the date / time
 		//var parseTime = d3_timeParse("%d-%b-%y");
 
+		var mindate = new Date(1992,7,1),
+            maxdate = new Date(2018,0,31);
+
+        var x = scaleTime().range([0, width]);   // map these the the chart width = total width    
 		// set the ranges
-		var x = scaleTime().range([0, width]);
+		//var x = scaleTime().range([0, width - margin.left])
 		var y = scaleLinear().range([height, 0]);
 
 		// define the line
@@ -92,12 +99,11 @@ export default function() {
 		// append the svg obgect to the body of the page
 		// appends a 'group' element to 'svg'
 		// moves the 'group' element to the top left margin
-		var svg = d3_select(".attendance-chart").append("svg")
+		var svg = container.append("svg")
 		    .attr("width", width + margin.left + margin.right)
 		    .attr("height", height + margin.top + margin.bottom)
-		  .append("g")
-		    .attr("transform",
-		          "translate(" + margin.left + "," + margin.top + ")");
+		  	.append("g")
+		    .attr("transform",  "translate(" + margin.left + "," + margin.top + ")");
 
 		// Get the data
 
@@ -108,21 +114,34 @@ export default function() {
 		  });
 
 		  // Scale the range of the data
-		  x.domain(d3_extent(data, function(d) { return d.d3Date; }));
-		  y.domain([0, d3_max(data, function(d) { return d.close; })]);
+
+		  x.domain([mindate, maxdate]) 
+		 // x.domain([0,d3_max(data, function(d) { return d.date; })]);
+		  y.domain([0, d3_max(data, function(d) { return d.close; }) +10000]);
 
 		  // Add the valueline path.
 
-		  
+
+		  // Add the X Axis
+		  svg.append("g")
+		  	.attr('class', 'customXaxis')	
+		    .attr("transform", "translate(0," + height + ")")
+		    .call(d3_axisBottom(x));
+
+		  // Add the Y Axis
+		  svg.append("g")
+		  	.attr('class', 'customYaxis')	
+		    .call(d3_axisRight(y));
 
 		  svg.append("path")
 		      .data([data])
 		      .attr("class", "line")
+
 		      //.attr("d", valueline);
 			
-		let lineTypes = ['a', 't'];
+			let lineTypes = ['a', 't'];
 
-		  lineTypes.forEach(function(l){
+		  	lineTypes.forEach(function(l){
     		let typeGroup = svg.append("g")
 
     		typeGroup.append('path')
@@ -136,18 +155,20 @@ export default function() {
     		});
     		
 
+		  d3_selectAll("g.customYaxis g.tick line")
+    		.attr("x1", 0-margin.left)
+    		.attr("x2", width-margin.left)
+    		.attr("stroke-dasharray", "1, 3");
 
-		  // Add the X Axis
-		  svg.append("g")
-		      .attr("transform", "translate(0," + height + ")")
-		      .call(d3_axisBottom(x));
-
-		  // Add the Y Axis
-		  svg.append("g")
-		      .call(d3_axisLeft(y));
-
+    	d3_selectAll("g.customYaxis g.tick text")
+    		.attr("x", 0-margin.left)
+    		.attr("y", -9)
+    		//.attr("x2", width-margin.left)
+    		//.attr("stroke-dasharray", "1, 3");	
 		
-		drawVisual(data);	
+		drawVisual(data,x,y);	
+
+		customYAxis()
 
     }
 
@@ -162,31 +183,58 @@ export default function() {
 
 
 
-function drawVisual(data){
-d3_selectAll('.riskLine')
-			.attr('d', function(data){
-				let type = d3_select(this).attr('id');
+	function drawVisual(data,xscale,yscale){
 
-				let valueline = d3_line()
-					//.curve(d3_curveBasis)
-				    .x(function(d) { return xscale(d.d3Date); })
-				    .y(function(d) { return yscale(d.attendanceNum); })
+		let tempArr = groupArray(data, 'homeTeam');
 
 
-				return valueline(riskCurveData);
+		d3_selectAll('.riskLine')
+				.attr('d', function(data){
+					let type = d3_select(this).attr('id');
+					var curveData;
+
+					type=='a' ? curveData = tempArr.Arsenal :  curveData = tempArr.Spurs;
+
+					if (type=='a'){
+						let valueline = d3_line()
+						.curve(d3_curveStep)
+						//.interpolate("basis")
+					    .x(function(d) { return xscale(new Date(d.d3Date)); })
+					    .y(function(d) { return yscale(d.attendanceNum); })
+
+					    return valueline(curveData);
+					}
+
+					if (type=='t'){
+						let valuelineT = d3_line()
+						.curve(d3_curveStep)
+						//.interpolate("basis")
+					    .x(function(d) { return xscale(new Date(d.d3Date)); })
+					    .y(function(d) { return yscale(d.attendanceNum); })
+
+					    return valuelineT(curveData);
+					}
+					
+					
+
+					
 			})	
-}
+
+
+	}
 
 
 
 
 	function customXAxis(g) {
-	  g.call(xaxis).tickValues(d3_range(0, 80000, 10000));
-	  //g.select(".domain").remove();
+	  //g.call(xaxis).tickValues(d3_range(0, 80000, 10000));
+	  g.select(".domain").remove();
 	}
 
 	function customYAxis() {
-	  d3_select(".riskYaxis")
+		console.log( d3_select(".customYaxis"))
+
+	  d3_select(".customYaxis")
 	  .select(".domain")
 	  .remove().selectAll(".tick:not(:first-of-type) line").attr("stroke", "#777").attr("stroke-dasharray", "2,2")
 	  .selectAll(".tick text").attr("x", 4).attr("dy", -12);
