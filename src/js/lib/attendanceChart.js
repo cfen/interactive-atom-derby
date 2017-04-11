@@ -16,6 +16,7 @@ import {
 import { transition } from 'd3-transition';
 
 import {
+    min as d3_min,
     max as d3_max,
     sum as d3_sum,
     extent as d3_extent,
@@ -52,9 +53,6 @@ export default function() {
         if (xhr.readyState == XMLHttpRequest.DONE) {
             dataset = JSON.parse(xhr.responseText);
 
-            var spurs = [];
-            var arsenal = [];
-
            for (var i = 0; i < dataset.attendances.length; i++) {
                 dataset.attendances[i].d3Date = parseTime(new Date(dataset.attendances[i].date));
                 //dataset.attendances[i].homeTeam == "Arsenal" ? arsenal.push(dataset.attendances[i]) : spurs.push(dataset.attendances[i]) ;
@@ -76,17 +74,18 @@ export default function() {
 
     	console.log(container.node().getBoundingClientRect().width)
 
-    	var margin = {top: 20, right: 20, bottom: 30, left: 50},
+    	var margin = {top: 20, right: 20, bottom: 30, left: 30},
 		    width = container.node().getBoundingClientRect().width,
 		    height = container.node().getBoundingClientRect().height;
 
 		// parse the date / time
 		//var parseTime = d3_timeParse("%d-%b-%y");
 
-		var mindate = new Date(1992,7,1),
+		var mindate = new Date(1991,7,1),
             maxdate = new Date(2018,0,31);
 
-        var x = scaleTime().range([0, width]);   // map these the the chart width = total width    
+        var x = scaleTime().range([0, width]);   
+        // map these the the chart width = total width    
 		// set the ranges
 		//var x = scaleTime().range([0, width - margin.left])
 		var y = scaleLinear().range([height, 0]);
@@ -117,7 +116,7 @@ export default function() {
 
 		  x.domain([mindate, maxdate]) 
 		 // x.domain([0,d3_max(data, function(d) { return d.date; })]);
-		  y.domain([0, d3_max(data, function(d) { return d.close; }) +10000]);
+		  y.domain([20000, d3_max(data, function(d) { return d.close; }) +5000]);
 
 		  // Add the valueline path.
 
@@ -130,8 +129,11 @@ export default function() {
 
 		  // Add the Y Axis
 		  svg.append("g")
-		  	.attr('class', 'customYaxis')	
+		  	.attr('class', 'customYaxis')
 		    .call(d3_axisRight(y));
+
+
+
 
 		  svg.append("path")
 		      .data([data])
@@ -158,13 +160,17 @@ export default function() {
 		  d3_selectAll("g.customYaxis g.tick line")
     		.attr("x1", 0-margin.left)
     		.attr("x2", width-margin.left)
-    		.attr("stroke-dasharray", "1, 3");
 
-    	d3_selectAll("g.customYaxis g.tick text")
-    		.attr("x", 0-margin.left)
-    		.attr("y", -9)
-    		//.attr("x2", width-margin.left)
-    		//.attr("stroke-dasharray", "1, 3");	
+	    	d3_selectAll("g.customYaxis g.tick text")
+	    		.attr("x", 0-margin.left)
+	    		.attr("y", -9)
+
+	    		//.attr("x2", width-margin.left)
+	    		//.attr("stroke-dasharray", "1, 3");
+
+	    	d3_selectAll(".customYaxis .tick text")
+			    .filter(function (d) { console.log(d); if (d==20000){ this.remove()}; if (d!=20000){ this.innerHTML = this.innerHTML.split(",")[0];} })
+			    			
 		
 		drawVisual(data,x,y);	
 
@@ -218,11 +224,25 @@ export default function() {
 					
 
 					
-			})	
+			})
+
+				//animate
+
+		// if(window.navigator.userAgent.toLowerCase().indexOf('firefox') <  0){
+  //         d3_selectAll('.riskLine').selectAll("path.line").each(function(d,i) {
+  //           var eachPath = d3_select(this),
+  //           totalLength = eachPath.node().getTotalLength();
+  //           eachPath.attr("stroke-dasharray", totalLength + " " + totalLength)
+  //           .attr("stroke-dashoffset", totalLength)
+  //           .transition()
+  //           .duration(1800)
+  //           .ease("linear")
+  //           .attr("stroke-dashoffset", 0);
+  //         });
+  //       }
 
 
 	}
-
 
 
 
@@ -236,7 +256,7 @@ export default function() {
 
 	  d3_select(".customYaxis")
 	  .select(".domain")
-	  .remove().selectAll(".tick:not(:first-of-type) line").attr("stroke", "#777").attr("stroke-dasharray", "2,2")
+	  // .remove().selectAll(".tick:not(:first-of-type) line").attr("stroke", "#777").attr("stroke-dasharray", "2,2")
 	  .selectAll(".tick text").attr("x", 4).attr("dy", -12);
 	}
 

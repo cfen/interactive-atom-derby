@@ -41,9 +41,11 @@ export async function render() {
 
     let attendancesHTML = Mustache.render(attendanceTemplate, { "data": data.attendances })
 
+    fs.writeFileSync("./.build/assets/data/scorers.json", JSON.stringify(data.scorerChart));
+
     fs.writeFileSync("./.build/assets/data/matches.json", JSON.stringify(data));
 
-    return `${attendancesHTML}${scorersHTML}${teamGamesHTML}${teamGoalsHTML}${headSliceHTML}`;
+    return `${scorersHTML}${attendancesHTML}${headSliceHTML}${teamGamesHTML}${teamGoalsHTML}`;
 }
 
 
@@ -180,6 +182,8 @@ function getTopScorerChart(a) {
         if (a[i].goalTally >= minGoals) { temp.push(a[i]) }
 
     }
+
+
 
     return temp
 }

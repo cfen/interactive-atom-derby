@@ -66,11 +66,19 @@ $axis-neutral: $neutral-5;
 		fill: none;
 		    stroke: $axis-neutral;
 		    shape-rendering: crispEdges;
+
 	}
 
 	.customYaxis line , .customXaxis line{
 		fill: none;
 		    stroke: $axis-neutral;
+		    shape-rendering: crispEdges;
+	}
+
+	.customYaxis text , .customXaxis text, customYaxis tick text,customXaxis tick text{
+			@include fs-textSans(1);
+			fill: $neutral-3;
+		    stroke: none;
 		    shape-rendering: crispEdges;
 	}
 
@@ -81,6 +89,10 @@ $axis-neutral: $neutral-5;
 	.customXaxis path{
 		stroke: $axis-neutral;
 		    shape-rendering: crispEdges;
+
+		.domain{
+			stroke:none;
+		}     
 	}
 
 
@@ -102,5 +114,56 @@ $axis-neutral: $neutral-5;
 	}
 
 
+	.gv-source{
+	margin-top: 0;
+	@include fs-textSans(1);
+	color: $neutral-3;
+
+
+}
+
+}
+
+.gv-label1 {
+	position: absolute;
+	color: #333;
+	bottom: 10px;
+	width: 125px;
+	left: calc(50% - 62px);
+	text-align: center;
+	@include fs-textSans(1);
+	color: 333;
+	font-size: 14px;
+	font-weight: bold;
+
+}
+
+
+
+.gv-label3 {
+	position: absolute;
+	color: #333;
+	bottom: 0px;
+	width: 125px;
+	left: calc(50% - 62px);
+	text-align: center;
+	@include fs-textSans(1);
+	color: 333;
+	font-size: 14px;
+	font-weight: bold;
+
+}
+
+
+.gv-label2 {
+	position: absolute;
+	top: 4px;
+	color: #333;
+	left: 75px;
+
+	@include fs-textSans(1);
+	color: $neutral-2;
+
+	font-weight: normal;
 
 }

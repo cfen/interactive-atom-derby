@@ -4,6 +4,22 @@ export function whitespaceFixRemoveSpaceAndAccents(s) {
 }
 
 
+// export function uniq_fast(a) {
+//     var seen = {};
+//     var out = [];
+//     var len = a.length;
+//     var j = 0;
+//     for(var i = 0; i < len; i++) {
+//          var item = a[i];
+//          if(seen[item] !== 1) {
+//                seen[item] = 1;
+//                out[j++] = item;
+//          }
+//     }
+//     return out;
+// }
+
+
 export function convert_accented_characters(str){
         var conversions = new Object();
         conversions['ae'] = 'ä|æ|ǽ';
