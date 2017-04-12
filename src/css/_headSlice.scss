@@ -1,5 +1,6 @@
 $aniTime:60s;
 .gv-head-wrapper {
+    position: relative;
     width: 100%;
     display: table;
 }
@@ -16,27 +17,85 @@ $aniTime:60s;
 }
 
 .gv-head-col-one {
-    width: 50%;
+    width: 60%;
     background-color: $arsenal-color;
+   
 }
 
 .gv-head-col-two {
-    display: table-cell;
-    background-color: $spurs-color
+    width: 40%;
+    left:60%;
+    background-color: $spurs-color;
+
+     // -webkit-transform: skew(30deg);
+     //   -moz-transform: skew(30deg);
+     //     -o-transform: skew(30deg);
+
 }
 
 .gv-head-text-holder {
     position: absolute;
-    left: calc(50% - 240px);
-    top: 0;
-    height: 120px;
+    left:240px;
+    bottom:0;
+
+    height: auto;
     width: 480px;
     background-color: none;
-    @include fs-headline(7);
-    font-weight: 200;
-    color: #FFF;
-    text-align: center;
+
+    h1{
+        @include fs-headline(9);
+        font-size:52px;
+        font-weight: 200;
+    }
+    
+    h2{
+        @include fs-headline(7);
+        font-weight: 200;
+        
+    }
+
+    h3{
+        @include fs-header(2);
+    }
+
+    h1, h2, h3, p{
+       color: #FFF; 
+    }
+
+    .standfirst-para{
+        margin-top: gs-height(1);
+        margin-bottom: gs-height(1);
+
+        @include fs-headline(2);
+        font-size:18px;
+        color: #FFF; 
+    }
+
+    .standfirst-para::before{
+       content:'';
+       display:block;
+       width: gs-span(2);
+       height:2px;
+       margin-bottom: $gs-baseline;
+       background-color:$neutral-5;
+        
+    }
+
 }
+
+
+
+
+.gv-head-col-two:before{
+    position: absolute;
+    content: '';
+    left:calc(60% - 320px);
+    border-style: solid;
+    border-color: transparent $spursAway transparent $spursAway ;
+    border-width:   0px 320px 578px 0 ;
+}
+
+
 
 .grahamArsenal{
 	background: url('<%= path %>/assets/imgs/graham.jpg');

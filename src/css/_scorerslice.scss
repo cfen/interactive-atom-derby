@@ -4,30 +4,43 @@
 		ul{
 			position:relative;
 			list-style-type: none;
-		    margin: 0;
+		    margin: 0 0 gs-height(1) 0;
 		    padding: 0;
-		    height:800px; 
+		    height: auto;
+		    @include mq(tablet){
+		    	height: gs-height(12);
+		    }
 		}
 
 	    li {
     	    display: inline-block;
 		    width: 100%;
-		    max-width: 179px;
+		    max-width: 192px;
 		    padding-right: 10px;
 		    margin-right: 10px;
 		    height: 100%;
 		    text-align: top;
 		    vertical-align: top;
 		    border-right: 1px solid #dcdcdc;
-		    height: 720px;
+		    height: auto;
+		    @include mq(tablet){
+		    	height: gs-height(12);
+		    }
 		}
 
 		li:first-child{
-		    margin-left: 54px;
+
+			@include mq(tablet){
+		    	height: gs-height(12);
+		    	margin-left: 20px;
+		    }
+		    
 		}
 
 		li:last-child{
 		    border: 0;
+		    margin-right:0;
+		    padding-right:0
 		}
 
 
@@ -37,45 +50,45 @@
 }
 
 .gv-date{
-	@include fs-textSans(2);
+	@include fs-textSans(1);
+	line-height:$gs-baseline+1;
 	color:$neutral-3;
 	clear:both;
 }
 
 .gv-match-result{
-	@include fs-textSans(2);
+	@include fs-textSans(1);
 	clear:both;
 }
 
-.gv-home-team{
+.gv-home-team, .gv-away-team{
 	float:left;
-	width: 66px;
+	width: 60px;
 	text-align:left;
-}
-
-.gv-goals{
-	float:left;
-	width: 39px;
-	text-align:center;
 }
 .gv-away-team{
-	float:right;
-	width: 66px;
+	float:left;
 	text-align:left;
 }
+.gv-goals{
+	float:left;
+	width: 40px;
+	text-align:center;
+}
+
 
 .pips-holder{
 	position:relative;
 	@include fs-textSans(3);
 	line-height:6px;
 	color:$neutral-3;
-	margin-bottom:$gs-baseline;
+	margin-bottom:$gs-baseline*1.25;
 
 }
 
 .gv-print-result{
 	margin-bottom: gs-height(1);
-	@include fs-textSans(3);
+	@include fs-textSans(1);
 	color:$neutral-2;
 }
 
@@ -87,38 +100,54 @@
 }
 
 .gv-goal-pip{
-	display:inline-block;
-	width:$gs-baseline*0.5;
-	height:$gs-baseline*0.5;
-	background-color:$neutral-4;
-	border-radius:500px;
+	display: inline-block;
+    width: 4px;
+    height: 9px;
+    border: 1px solid  darken($neutral-4, 10) !important;
+    background-color: $neutral-4;
+    border-radius: 500px;
+    &.spurs{
+		 border: 1px solid darken($spurs-color, 10) !important;
+	}
+	&.arsenal{
+		 border: 1px solid darken($arsenal-color, 10) !important;
+	}
 
 }
 
 .hl-pip{
 	opacity:0.8;
 	background-color:$accent-color;
+
+}
+
+
+
+
 }
 
 .spurs{
-	fill:$spurs-color;
-	color:$spurs-color;
-	background-color:$spurs-color;
+	fill:$spurs-color !important;
+	color:$spurs-color !important;
+	background-color:$spurs-color !important;
+}
+
+.spursAway{
+	fill:$spursAway !important;
+	color:$spursAway !important;
+	background-color:$spursAway !important;
 }
 
 .arsenal{
-	fill:$arsenal-color;
-	color:$arsenal-color;
-	background-color:$arsenal-color;
+	fill:$arsenal-color !important;
+	color:$arsenal-color !important;
+	background-color:$arsenal-color !important;
 }
 
 .neutral-team{
-	fill:$neutral-team-color;
-	color:$neutral-team-color;
-	background-color:$neutral-team-color;
-}
-
-
+	fill:$neutral-team-color !important;
+	color:$neutral-team-color !important;
+	background-color:$neutral-team-color !important;
 }
 
 // .list-item-Adebayor{

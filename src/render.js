@@ -2,6 +2,11 @@ import Mustache from 'mustache'
 import fs from 'file-system'
 import rp from 'request-promise'
 
+import {
+    uniq as _uniq,
+
+} from 'lodash';
+
 import headSliceTemplate from './src/templates/headSlice.html!text'
 import teamGamesTemplate from './src/templates/teamGames.html!text'
 import teamGoalsTemplate from './src/templates/teamGoals.html!text'
@@ -45,7 +50,7 @@ export async function render() {
 
     fs.writeFileSync("./.build/assets/data/matches.json", JSON.stringify(data));
 
-    return `${scorersHTML}${attendancesHTML}${headSliceHTML}${teamGamesHTML}${teamGoalsHTML}`;
+    return `${headSliceHTML}${scorersHTML}${attendancesHTML}${teamGamesHTML}${teamGoalsHTML}`;
 }
 
 
@@ -179,11 +184,15 @@ function getTopScorerChart(a) {
             return new Date(b.Date) - new Date(a.Date);
         });
 
-        if (a[i].goalTally >= minGoals) { temp.push(a[i]) }
+        
+
+        
+
+        if (a[i].goalTally >= minGoals) { a[i].matches = _uniq(a[i].matches);  temp.push(a[i]) }//console.log(a[i].matches);
 
     }
 
-
+    
 
     return temp
 }

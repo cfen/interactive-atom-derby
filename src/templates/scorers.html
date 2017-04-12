@@ -1,3 +1,22 @@
+<div class="gv-slice">
+	
+	<div class="gv-inner">
+	
+		<div class="gv-section-title">
+			<h2 class="slice-one-header">Scorers</h2>
+		</div>
+		<div class="gv-inner-content" style="max-width:620px;">
+			
+				Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+		
+		</div>
+		
+	</div>
+	
+</div>
+
+
+
 
 <div class="gv-slice scorer-slice" id="scorerContent">
 	
@@ -6,19 +25,23 @@
 
 		
 			
-		<div class="gv-scorer-wrapper">				
+		<div class="gv-scorer-wrapper">	
+
+			
 			<ul>
 			{{#data}}
 				<li class="gv-list-item list-item-{{{scorerRef}}}" data-scorer="{{{scorerRef}}}">
-					<div class="styled-name">{{{printScorer}}}</div>
+					<div class="styled-name">{{{printScorer}}}</div>		
+						<div class="styled-number">{{{goalTally}}}</div>
 
-					<div class="styled-number">{{{goalTally}}}</div>
-
+						<div class="styled-name" style="margin-bottom:24px;">goals</div>
 					{{#matches}}
 					<div class="gv-print-result none-mobile">
 						<div class="gv-date">{{{Date}}}</div> 
 					
-						<div class="gv-home-team">{{{printHomeTeam}}}</div> <div class="gv-goals">{{{printScore}}}</div> <div class="gv-away-team">{{{printAwayTeam}}}</div>
+						<div class="gv-home-team">{{{printHomeTeam}}}</div> 
+						<div class="gv-goals">{{{printScore}}}</div> 
+						<div class="gv-away-team">{{{printAwayTeam}}}</div>
 
 						<div class="gv-home-team pips-holder">
 							{{#HomeGoals}}
@@ -26,7 +49,7 @@
 							{{/HomeGoals}}
 						</div> 
 
-						<div class="gv-goals"></div> 
+						<div class="gv-goals" style="opacity:0;">{{{printScore}}}</div> 
 
 						<div class="gv-away-team pips-holder">
 							{{#AwayGoals}}
@@ -39,6 +62,13 @@
 
 					{{/matches}}
 
+					<div class="scorer-wrapper" style="position:absolute; bottom:0">
+
+						
+
+						
+
+					</div>
 				</li>	
 				{{/data}}
 			</ul>

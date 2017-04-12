@@ -6,7 +6,8 @@
 $accent-color:$news-main-2;
 
 $spurs-color: $guardian-brand-dark;
-$arsenal-color: $live-support-2;
+$spursAway: $news-main-2;
+$arsenal-color: #df4e50;
 $neutral-team-color: $neutral-4;
 
 @import "headSlice";
@@ -37,9 +38,15 @@ h2{
 	padding-top:3px;
 }
 
+.gv-article-text{
+	width: auto;
+    max-width: 620px;
+}    
+
+
 .styled-name{
-	@include fs-headline(3);
-	line-height: 20px;
+	@include fs-headline(2);
+	line-height: 14px;
 
 	padding-top:3px;
 	// font-weight:200;
@@ -49,12 +56,12 @@ h2{
 
 .styled-number{
 	 @include f-sans;
-    font-weight: 200;
 
 
-	font-size:140px;
-	line-height: 120px;
+	font-size:90px;
+	line-height: 80px;
 	font-weight:200;
+
 	padding:0;
 	margin:0;
 }
@@ -124,7 +131,7 @@ h4, h5{
 		float: left;
 	}
 	@media(min-width:1300px){
-		max-width: 220px;
+		max-width: 200px;
 		float: left;
 	}
 
