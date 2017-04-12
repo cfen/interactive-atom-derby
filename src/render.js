@@ -40,7 +40,7 @@ export async function render() {
 
     let teamGamesHTML = Mustache.render(teamGamesTemplate, data);
 
-    let teamGoalsHTML = Mustache.render(teamGoalsTemplate, data);
+    //let teamGoalsHTML = Mustache.render(teamGoalsTemplate, data);
 
     let scorersHTML = Mustache.render(scorersTemplate, {  "data": data.scorerChart });
 
@@ -50,7 +50,7 @@ export async function render() {
 
     fs.writeFileSync("./.build/assets/data/matches.json", JSON.stringify(data));
 
-    return `${headSliceHTML}${scorersHTML}${attendancesHTML}${teamGamesHTML}${teamGoalsHTML}`;
+    return `${headSliceHTML}${teamGamesHTML}${scorersHTML}${attendancesHTML}`;
 }
 
 
