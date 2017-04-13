@@ -61,6 +61,20 @@ function initView(data) {
     return editHtml;
 }
 
+
+function getSeason(d){
+
+    var MM = new Date(d).getMonth();
+
+    var YYYY = new Date(d).getFullYear();
+
+    var season;
+    
+    MM > 7 ? season = YYYY+"-"+Number(YYYY+1) : season = Number(YYYY-1)+"-"+YYYY;
+    
+    return season;
+}
+
 function formatData(data) {
 
     var allData = {}
@@ -69,6 +83,7 @@ function formatData(data) {
 
     let allMatches = data.sheets.Sheet1.map((match) => {
 
+        match.season = getSeason(match.Date);
         match.aGoals = getGoals(match['Arsenal goalscorers'], match);
         match.tGoals = getGoals(match['Tottenham goalscorers'], match);
         match.ID = tempID;
@@ -184,11 +199,8 @@ function getTopScorerChart(a) {
             return new Date(b.Date) - new Date(a.Date);
         });
 
-        
 
-        
-
-        if (a[i].goalTally >= minGoals) { a[i].matches = _uniq(a[i].matches);  temp.push(a[i]) }//console.log(a[i].matches);
+        if (a[i].goalTally >= minGoals) { a[i].matches = _uniq(a[i].matches); console.log(a[i].matches); temp.push(a[i]) }//console.log(a[i].matches);
 
     }
 
