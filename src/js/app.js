@@ -1,12 +1,13 @@
 //'<%= path %>/assets/data/matches.json'
 import attendanceChart from './lib/attendanceChart'
+import seasonGoalsChart from './lib/seasonGoalsChart'
 
 
 // var parseTime = d3.timeParse("%B %d, %Y");
 function init(){
-	addView();
+	//addView();
 	let attendanceChartRender = attendanceChart();
-	console.log(attendanceChartRender);	
+	let seasonChartRender = seasonGoalsChart();
 }
 
 function addView(){
@@ -18,8 +19,7 @@ function findPips(){
 	        let s = el.getAttribute("data-scorer");
 	        var pips = el.querySelectorAll('.gv-goal-pip');	        
 	        highlightPips(s,pips);
-    });
-
+    	});
 }
 
 function highlightPips(s,pips){

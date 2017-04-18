@@ -31,44 +31,40 @@
 			<ul>
 			{{#data}}
 				<li class="gv-list-item list-item-{{{scorerRef}}}" data-scorer="{{{scorerRef}}}">
-					<div class="styled-name">{{{printScorer}}}</div>		
-						<div class="styled-number">{{{goalTally}}}</div>
+					<h5>{{{printScorer}}}</h5>		
+						<p>{{{goalTally}}} goals</p>
 
-						<div class="styled-name" style="margin-bottom:24px;">goals</div>
-					{{#matches}}
-					<div class="gv-print-result none-mobile">
-						<div class="gv-date">{{{Date}}}</div> 
-					
-						<div class="gv-home-team">{{{printHomeTeam}}}</div> 
-						<div class="gv-goals">{{{printScore}}}</div> 
-						<div class="gv-away-team">{{{printAwayTeam}}}</div>
+						<!-- <div class="styled-name" style="margin-bottom:24px;">goals</div> -->
 
-						<div class="gv-home-team pips-holder">
-							{{#HomeGoals}}
-								<div class="gv-goal-pip {{{scorerRef}}}" data-club="{{{printHomeTeam}}}" data-scorer="{{{scorerRef}}}"></div>
-							{{/HomeGoals}}
-						</div> 
+						<div class="gv-score-charts-wrapper" rel="{{{scorerRef}}}">
+							{{#seasonsArr}}
+								<div class="season-container" player="{{{scorerRef}}}" season="{{{season}}}"></div>
+							{{/seasonsArr}}
 
-						<div class="gv-goals" style="opacity:0;">{{{printScore}}}</div> 
+						<!-- <div class="gv-print-result none-mobile">
+									<div class="gv-date">{{{Date}}}</div> 
+								
+									<div class="gv-home-team">{{{printHomeTeam}}}</div> 
+									<div class="gv-goals">{{{printScore}}}</div> 
+									<div class="gv-away-team">{{{printAwayTeam}}}</div>
 
-						<div class="gv-away-team pips-holder">
-							{{#AwayGoals}}
-								<div class="gv-goal-pip {{{scorerRef}}}" data-club="{{{printAwayTeam}}}" data-scorer="{{{scorerRef}}}"></div>
-							{{/AwayGoals}}
-						</div>
+									<div class="gv-home-team pips-holder">
+										{{#HomeGoals}}
+											<div class="gv-goal-pip {{{scorerRef}}}" data-club="{{{printHomeTeam}}}" data-scorer="{{{scorerRef}}}"></div>
+										{{/HomeGoals}}
+									</div> 
 
-					</div>
+									<div class="gv-goals" style="opacity:0;">{{{printScore}}}</div> 
 
-
-					{{/matches}}
-
-					<div class="scorer-wrapper" style="position:absolute; bottom:0">
-
-						
-
-						
+									<div class="gv-away-team pips-holder">
+										{{#AwayGoals}}
+											<div class="gv-goal-pip {{{scorerRef}}}" data-club="{{{printAwayTeam}}}" data-scorer="{{{scorerRef}}}"></div>
+										{{/AwayGoals}}
+									</div>
+						</div> -->
 
 					</div>
+
 				</li>	
 				{{/data}}
 			</ul>

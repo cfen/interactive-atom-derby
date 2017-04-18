@@ -1,6 +1,7 @@
 import Mustache from 'mustache'
 import fs from 'file-system'
 import rp from 'request-promise'
+import groupArray from 'group-array'
 
 import {
     uniq as _uniq,
@@ -50,10 +51,8 @@ export async function render() {
 
     fs.writeFileSync("./.build/assets/data/matches.json", JSON.stringify(data));
 
-    return `${headSliceHTML}${teamGamesHTML}${scorersHTML}${attendancesHTML}`;
+    return `${teamGamesHTML}${scorersHTML}${attendancesHTML}`;//${headSliceHTML}
 }
-
-
 
 
 function initView(data) {
@@ -74,6 +73,7 @@ function getSeason(d){
     
     return season;
 }
+
 
 function formatData(data) {
 
@@ -196,18 +196,47 @@ function getTopScorerChart(a) {
         a[i].matches.sort(function(a, b) {
             // Turn your strings into dates, and then subtract them
             // to get a value that is either negative, positive, or zero.
+
+            
+
             return new Date(b.Date) - new Date(a.Date);
-        });
+        }); 
 
+        a[i].seasonsPlayed = groupArray(a[i].matches, 'season');
 
-        if (a[i].goalTally >= minGoals) { a[i].matches = _uniq(a[i].matches); console.log(a[i].matches); temp.push(a[i]) }//console.log(a[i].matches);
+     
+
+        if (a[i].goalTally >= minGoals) { 
+            a[i].matches = _uniq(a[i].matches); 
+            temp.push(a[i]); 
+            a[i].seasonsPlayedMatches = groupArray(a[i].matches, 'season');
+            a[i].seasonsPlayed = Object.keys(a[i].seasonsPlayedMatches);
+
+            a[i].seasonsArr = getSeasonsArr(a[i].seasonsPlayed,a[i].seasonsPlayedMatches)
+            console.log(a[i].seasonsArr)
+
+        }//console.log(a[i].matches);
+
+    } 
+   
+    return temp
+    
+}
+
+function getSeasonsArr(seasons,matches){
+    let tempArr = [];
+
+    for(var i = 0; i<seasons.length; i++){
+        var newObj = { season: seasons[i] }
+
+        tempArr.push(newObj)
 
     }
 
-    
+    return tempArr;
 
-    return temp
 }
+
 
 function getGoals(s, m) {
     let a = s.split(",");
@@ -245,7 +274,6 @@ function checkGoalTotals(s, m) {
     let scorerFound = false;
     if (scorersTotal.length == 0) {
         var newObj = {};
-
         newObj.scorer = s;
         newObj.scorerRef = whitespaceFixRemoveSpaceAndAccents(s);
         newObj.printScorer = s.split("-").join(" ");
@@ -254,7 +282,6 @@ function checkGoalTotals(s, m) {
         newObj.matches.push(m);
         scorersTotal.push(newObj);
         scorerFound = true;
-
     } else {
         for (var i = 0; i < scorersTotal.length; i++) {
             if (scorersTotal[i].scorer == s) {
@@ -276,5 +303,7 @@ function checkGoalTotals(s, m) {
         scorersTotal.push(newObj);
         scorerFound = true;
     }
-
 }
+
+
+
