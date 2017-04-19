@@ -4,8 +4,7 @@ import rp from 'request-promise'
 import groupArray from 'group-array'
 
 import {
-    uniq as _uniq,
-
+    uniq as _uniq
 } from 'lodash';
 
 import headSliceTemplate from './src/templates/headSlice.html!text'
@@ -26,8 +25,6 @@ var aCountGoals = 0;
 var tCountGoals = 0;
 
 
-//remote
-//"https://raw.githubusercontent.com/cfen/merseysideDerby/master/src/assets/data/arseSpurs.json",
 
 export async function render() {
     let data = formatData(await rp({
@@ -264,6 +261,11 @@ function getGoals(s, m) {
         	}
      
     }
+
+    goals.sort(function(a, b) {
+            return a.minute - b.minute;
+    }); 
+
 
     return goals;
 

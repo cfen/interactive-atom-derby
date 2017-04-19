@@ -42,6 +42,8 @@ import {
 
 var parseTime = d3_timeParse("%Y-%m-%d"); //("%d-%b-%y"); //;
 
+var tooltip; 
+
 let dataset, localData;
 let svgshell, svg, lines;
 
@@ -80,8 +82,6 @@ export default function() {
 
     	let seasonContainers = document.querySelectorAll(".season-container");
 
-    	var margin = {top: 20, right: 20, bottom: 30, left: 30}, width = 145, height = 120;
-
     	data.forEach(function(dataEl){
     		var targetContainers = [];
     		let a = dataEl.scorerRef;
@@ -94,12 +94,13 @@ export default function() {
 	    	buildCharts(a,targetContainers,dataEl)
     	})
 
-		var tooltip = d3_select(".gv-scorer-wrapper")
+        //add tooltip
+		tooltip = d3_select("body")
 		    .append("div")
+            .attr("class", "tooltip")
 		    .style("position", "absolute")
 		    .style("z-index", "10")
-		    .style("visibility", "hidden")
-		    .text("a simple tooltip");
+		    .style("visibility", "hidden");
 
     }
 
@@ -171,6 +172,8 @@ export default function() {
         	let yPos = y(match.date)
 
         	let goalW = 10;
+
+            let ttOffset = 10;
         	
         	let matchG = svg.append("g")
 			  	.append("line")
@@ -187,11 +190,22 @@ export default function() {
 	        		.append("rect")
 	        		.attr("scorer", match.AwayGoals[i].scorerRef)
 	        		.attr("team", match.printAwayTeam)
+                    .attr("ha", "a")
+                    .attr("goalNum", i)
                     .attr("width", 10)
                     .attr("height", 10)
                     .attr("x", ((width/2)+2) + (i*11))
                     .attr("y", yPos - 5)
                     .attr("class",getClass(match.printAwayTeam,match.AwayGoals[i].scorerRef, data.scorerRef))
+                    .style("cursor","pointer")
+                    .on("mousemove", function(){ setTooltipTxt(match, this); tooltip.style("visibility", "visible").style("left", (event.x+ttOffset)+"px").style("top", (event.y+ttOffset)+"px");})
+                    .on("mouseout", function(){return tooltip.style("visibility", "hidden");});
+                    // .on("mousemove", function(){
+                    //     return tooltip.style("left", (d3.event.pageX) + "px")
+                    //     .style("top", (d3.event.pageY - 28) + "px")
+                    // })
+                    //.on("mousemove", function(){return tooltip.style("top", (d3_pageY-10)+"px").style("left",(d3_pageX+10)+"px");})
+                    
 	        }  
 
 	        // addGoals
@@ -200,23 +214,48 @@ export default function() {
 	        		.append("rect")  
 	        		.attr("scorer", match.HomeGoals[i].scorerRef)
 	        		.attr("team", match.printHomeTeam)
+                    .attr("ha", "h")
+                    .attr("goalNum", i)
                     .attr("width", 10)
                     .attr("height", 10)
                     .attr("x", ((width/2)-2) - (i*11) - 11)
                     .attr("y", yPos - 5)
-                    .attr("class",getClass(match.printHomeTeam,match.HomeGoals[i].scorerRef, data.scorerRef))
-                    .on("mouseover", function(){return tooltip.style("visibility", "visible");})
-					//.on("mousemove", function(){return tooltip.style("top", (d3_pageY-10)+"px").style("left",(d3_pageX+10)+"px");})
-					.on("mouseout", function(){return tooltip.style("visibility", "hidden");});
-                    
+                    .style("cursor","pointer")                   
+                    .attr("class",getClass(match.printHomeTeam, match.HomeGoals[i].scorerRef, data.scorerRef))                     
+                    .on("mousemove", function(){ setTooltipTxt(match, this); tooltip.style("visibility", "visible").style("left", (event.x+ttOffset)+"px").style("top", (event.y+ttOffset)+"px");})
+                    .on("mouseout", function(){ return tooltip.style("visibility", "hidden"); })
+   
 	        }         
 
         })
 
     }
 
-    function getClass(r,s, t){
+
+    function setTooltipTxt(match, cell){
+        let newHTML = match.Date;
+        let goalRef = Number(cell.getAttribute("goalNum"));
+        var ha = cell.getAttribute("ha");
+        var goal;
+        if (ha == "h"){ goal = match.HomeGoals[goalRef] }
+        if (ha == "a"){ goal = match.AwayGoals[goalRef] }
+
+        
+        newHTML += "<br/>"+ match.printResult;
+        newHTML += "<br/>"+goal.scorer+" ("+goal.minute+" mins)";
+
+
+       
+
+        return tooltip.html(newHTML);
+
+
+    }
+
+    
+    function getClass(r,s,t){
     	let c = "neutral-team";
+        // checking team and scorerRef
     	if(r == "Tottenham" && s==t){ c = "Tottenham" } 
     	if(r == "Arsenal" && s==t){ c = "Arsenal" }
     	return c;

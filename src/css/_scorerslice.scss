@@ -181,6 +181,16 @@
 
 }
 
+.tooltip{
+	height: auto;
+	width: gs-span(2);
+	padding: $gs-baseline;
+	background-color:#FFF;
+	border: 1px solid $neutral-4;
+	@include fs-textSans(1);
+
+}
+
 // .list-item-Adebayor{
 // 	background-image: url('<%= path %>/assets/imgs/Adebayor.png');
 // }
