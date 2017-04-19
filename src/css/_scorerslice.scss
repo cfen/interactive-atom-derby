@@ -1,127 +1,142 @@
 .gv-scorer-wrapper {
-		height:auto;
+	height:auto;
+	margin-left:10px;
 
-		ul{
-			position:relative;
-			list-style-type: none;
-		    margin: 0 0 gs-height(1) 0;
-		    padding: 0;
-		    height: auto;
-		  
-		}
-
-	    li {
-    	    display: inline-block;
-		    width: 100%;
-		    max-width: 150px;
-		    padding-right: 10px;
-		    margin-right: 10px;
-		    height: 100%;
-		    text-align: top;
-		    vertical-align: top;
-		    // border-right: 1px solid #dcdcdc;
-		    
-		
-		}
-
-		li:first-child{
-
-			@include mq(tablet){
-		    	margin-left: 20px;
-		    }
-		    
-		}
-
-		li:last-child{
-		    border: 0;
-		    margin-right:0;
-		    padding-right:0
-		}
-
-
-
-.home-team-pip, .away-team-pip{
-	opacity:0.8;
-}
-
-.gv-date{
-	@include fs-textSans(1);
-	line-height:$gs-baseline+1;
-	color:$neutral-3;
-	clear:both;
-}
-
-.gv-match-result{
-	@include fs-textSans(1);
-	clear:both;
-}
-
-.gv-home-team, .gv-away-team{
-	float:left;
-	width: 60px;
-	text-align:left;
-}
-.gv-away-team{
-	float:left;
-	text-align:left;
-}
-.gv-goals{
-	float:left;
-	width: 40px;
-	text-align:center;
-}
-
-
-.pips-holder{
-	position:relative;
-	@include fs-textSans(3);
-	line-height:6px;
-	color:$neutral-3;
-	margin-bottom:$gs-baseline*1.25;
-
-}
-
-.gv-print-result{
-	margin-bottom: gs-height(1);
-	@include fs-textSans(1);
-	color:$neutral-2;
-}
-
-
-.gv-list-item{
-	background-position: top right;
-    background-repeat: no-repeat;
-    background-size: auto;
-}
-
-.gv-goal-pip{
-	display: inline-block;
-    width: 4px;
-    height: 9px;
-    border: 1px solid  darken($neutral-4, 10) !important;
-    background-color: $neutral-4;
-    border-radius: 500px;
-    &.spurs{
-		 border: 1px solid darken($spurs-color, 10) !important;
-	}
-	&.arsenal{
-		 border: 1px solid darken($arsenal-color, 10) !important;
+	@include mq(tablet){
+		margin-left:0;
 	}
 
+	@include mq(desktop){
+		margin-left:160px;
+	}
+	@media(min-width:1300px){
+		margin-left:220px;
+	}
+
+	ul{
+		position:relative;
+		list-style-type: none;
+	    margin: 0 0 gs-height(1) 0;
+	    padding: 0;
+	    height: auto;	  
+	}
+
+    li {
+	    display: inline-block;
+	    width: 100%;
+	    max-width: 150px;
+	    padding-right: 10px;
+	    margin-right: 10px;
+	    height: 100%;
+	    text-align: top;
+	    vertical-align: top;
+	    // border-right: 1px solid #dcdcdc;
+	}
+
+	li:first-child{
+		@include mq(tablet){
+	    	margin-left: 20px;
+	    }	    
+	}
+
+	li:last-child{
+	    border: 0;
+	    margin-right:0;
+	    padding-right:0
+	}
+
+	.home-team-pip, .away-team-pip{
+		opacity:0.8;
+	}
+
+	.gv-date{
+		@include fs-textSans(1);
+		line-height:$gs-baseline+1;
+		color:$neutral-3;
+		clear:both;
+	}
+
+	.gv-match-result{
+		@include fs-textSans(1);
+		clear:both;
+	}
+
+	.gv-home-team, .gv-away-team{
+		float:left;
+		width: 60px;
+		text-align:left;
+	}
+	.gv-away-team{
+		float:left;
+		text-align:left;
+	}
+	.gv-goals{
+		float:left;
+		width: 40px;
+		text-align:center;
+	}
+
+
+	.pips-holder{
+		position:relative;
+		@include fs-textSans(3);
+		line-height:6px;
+		color:$neutral-3;
+		margin-bottom:$gs-baseline*1.25;
+
+	}
+
+	.gv-print-result{
+		margin-bottom: gs-height(1);
+		@include fs-textSans(1);
+		color:$neutral-2;
+	}
+
+
+	.gv-list-item{
+		background-position: top right;
+	    background-repeat: no-repeat;
+	    background-size: auto;
+
+	    h5{
+	    	@include fs-header(2);
+	    	line-height: 20px;
+	    	margin-bottom:0;
+	    }
+	     h6{
+	    	@include fs-headline(2);
+	    	margin-bottom:$gs-baseline*2;
+	    }
+	}
+
+	.gv-goal-pip{
+		display: inline-block;
+	    width: 4px;
+	    height: 9px;
+	    border: 1px solid  darken($neutral-4, 10) !important;
+	    background-color: $neutral-4;
+	    border-radius: 500px;
+	    &.spurs{
+			 border: 1px solid darken($spurs-color, 10) !important;
+		}
+		&.arsenal{
+			 border: 1px solid darken($arsenal-color, 10) !important;
+		}
+
+	}
+
+	.hl-pip{
+		opacity:0.8;
+		background-color:$accent-color;
+
+	}
+
+
+
+
 }
 
-.hl-pip{
-	opacity:0.8;
-	background-color:$accent-color;
-
-}
-
-
-
-
-}
-
-.spurs{
+.spurs, .Tottenham{
 	fill:$spurs-color !important;
 	color:$spurs-color !important;
 	background-color:$spurs-color !important;
@@ -133,7 +148,7 @@
 	background-color:$spursAway !important;
 }
 
-.arsenal{
+.arsenal, .Arsenal{
 	fill:$arsenal-color !important;
 	color:$arsenal-color !important;
 	background-color:$arsenal-color !important;
@@ -163,8 +178,6 @@
 	}
 
 	margin-bottom:$gs-baseline;
-
-
 
 }
 
